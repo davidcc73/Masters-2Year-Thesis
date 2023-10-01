@@ -76,7 +76,7 @@ valid. Otherwise, invoke the `ipv4_lpm` table if the `ipv4` header is valid.
 `ipv4` headers. Remember that the deparser will only emit a header if it is
 valid. A header's implicit validity bit is set by the parser upon extraction.
 So there is no need to check header validity here.
-7. **TODO:** Add static rules for your newly defined table so that the switches
+7. **TODO:** Add static rules for your newly defined table so that the switches       n tive de fazer nada, ja estavam, n teem default nem foi preciso
 will forward correctly for each possible value of `dst_id`. See the diagram
 below for the topology's port configuration as well as how we will assign IDs
 to hosts. For this step you will need to add your forwarding rules to the
@@ -104,12 +104,12 @@ to hosts. For this step you will need to add your forwarding rules to the
 3. Each host includes a small Python-based messaging client and server. In
 `h2`'s xterm, start the server:
   ```bash
-  ./receive.py
+  sudo python3 ./receive.py
   ```
 4. First we will test without tunneling. In `h1`'s xterm, send a message to
 `h2`:
   ```bash
-  ./send.py 10.0.2.2 "P4 is cool"
+  sudo python3 ./send.py 10.0.2.2 "P4 is cool"
   ```
   The packet should be received at `h2`. If you examine the received packet
   you should see that is consists of an Ethernet header, an IP header, a TCP
@@ -118,7 +118,7 @@ to hosts. For this step you will need to add your forwarding rules to the
   will instead be received by `h3`.
 5. Now we test with tunneling. In `h1`'s xterm, send a message to `h2`:
   ```bash
-  ./send.py 10.0.2.2 "P4 is cool" --dst_id 2
+  sudo python3 ./send.py 10.0.2.2 "P4 is cool" --dst_id 2
   ```
   The packet should be received at `h2`. If you examine the received packet you
   should see that is consists of an Ethernet header, a tunnel header, an IP header,

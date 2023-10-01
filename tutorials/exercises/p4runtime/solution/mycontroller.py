@@ -38,9 +38,9 @@ def writeTunnelRules(p4info_helper, ingress_sw, egress_sw, tunnel_id,
     :param dst_ip_addr: the destination Ethernet address to write in the
                         egress rule
     """
-    # 1) Tunnel Ingress Rule
-    table_entry = p4info_helper.buildTableEntry(
-        table_name="MyIngress.ipv4_lpm",
+    # 1) Tunnel Ingress Rule                    
+    table_entry = p4info_helper.buildTableEntry(        #vamos criar uma tabela no switch, é a própria tabela que antes estvam nos .json
+        table_name="MyIngress.ipv4_lpm",                #alguns campos sao var, assim a funcao da para o h1 e h2
         match_fields={
             "hdr.ipv4.dstAddr": (dst_ip_addr, 32)
         },
@@ -48,7 +48,7 @@ def writeTunnelRules(p4info_helper, ingress_sw, egress_sw, tunnel_id,
         action_params={
             "dst_id": tunnel_id,
         })
-    ingress_sw.WriteTableEntry(table_entry)
+    ingress_sw.WriteTableEntry(table_entry)             #enviar a tabela para o switch que a  instalará
     print("Installed ingress tunnel rule on %s" % ingress_sw.name)
 
     # 2) Tunnel Transit Rule

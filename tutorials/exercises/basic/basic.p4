@@ -91,7 +91,8 @@ control MyIngress(inout headers hdr,
         mark_to_drop(standard_metadata);								                /*marca o pacote atual como futuro drop, assim as proximas etapas ja sabem o que fazer*/
     }
 
-    /*!!!each action parameter must specify both type and direction, estes n precisam porque vem da tabela do .json*/
+    /*action parameters must specify direction, são Directional (veem do data plane), estes n precisam porque vem da tabela do .json, são directionless(veem do control plane) */
+
     action ipv4_forward(macAddr_t dstAddr, egressSpec_t port) {			    /*vamos alterar o hdr(copia do header) para depois usar como novo header do pacote, os arg vem da aplicaçao da tabela no json file*/
         standard_metadata.egress_spec = port;							              /*port para onde o pacote deve ser enviado, tem var inf como IP, o Egress Port, refere mesmo ao port física para a saida*/
         hdr.ethernet.srcAddr = hdr.ethernet.dstAddr;					          /*mudar MAC src no header para o de dest*/
@@ -109,7 +110,7 @@ control MyIngress(inout headers hdr,
             drop;
             NoAction;
         }
-        size = 1024;                                                    /*tamanho maximo da tabela chamada*/
+        size = 1024;                                                    /*nº máximo de entradas da tabela chamada*/
         default_action = NoAction();                                    /*para casos sem correspondencia*/
     }
     /*var locais podem ser defenidas aqui ou dentro do apply*/

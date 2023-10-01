@@ -2,7 +2,6 @@
 #include <core.p4>
 #include <v1model.p4>
 
-// NOTE: new type added here
 const bit<16> TYPE_MYTUNNEL = 0x1212;
 const bit<16> TYPE_IPV4 = 0x800;
 
@@ -20,7 +19,6 @@ header ethernet_t {
     bit<16>   etherType;
 }
 
-// NOTE: added new header type
 header myTunnel_t {
     bit<16> proto_id;
     bit<16> dst_id;
@@ -45,7 +43,6 @@ struct metadata {
     /* empty */
 }
 
-// NOTE: Added new header type to headers struct
 struct headers {
     ethernet_t   ethernet;
     myTunnel_t   myTunnel;
@@ -69,9 +66,17 @@ parser MyParser(packet_in packet,
     state parse_ethernet {
         packet.extract(hdr.ethernet);
         transition select(hdr.ethernet.etherType) {
+            TYPE_MYTUNNEL : parse_mytunnel;
             TYPE_IPV4 : parse_ipv4;
             default : accept;
         }
+    }
+    state parse_mytunnel {                              /*temos de extrair no hdr my tunnel para analisar depois*/
+        packet.extract(hdr.myTunnel);
+        transition select(hdr.myTunnel.proto_id) {      /*tenho de extrair o id para saber o tipo de pacote encapsulado*/
+          TYPE_IPV4: parse_ipv4;                        /*se for ipv4 entao esta tudo bem*/
+          default: accept;
+          }
     }
 
     state parse_ipv4 {
@@ -122,17 +127,33 @@ control MyIngress(inout headers hdr,
         default_action = drop();
     }
 
-    // TODO: declare a new action: myTunnel_forward(egressSpec_t port)
 
+    // TODO: declare a new action: myTunnel_forward(egressSpec_t port)
+    action myTunnel_forward(egressSpec_t port) {
+        standard_metadata.egress_spec = port;                 /*???n percebo porque n reduzimos o ttl*/
+    }
 
     // TODO: declare a new table: myTunnel_exact
     // TODO: also remember to add table entries!
-
+    table myTunnel_exact {
+        key = {
+            hdr.myTunnel.dst_id: exact;
+        }
+        actions = {
+            myTunnel_forward;
+            drop;
+        }
+        size = 1024;
+        default_action = drop();
+    }
 
     apply {
-        // TODO: Update control flow
-        if (hdr.ipv4.isValid()) {
+        // TODO: Update control flow             dava para simplificar os ifs mas da no mesmo e fica mais claro assim
+        if (hdr.ipv4.isValid() && !hdr.myTunnel.isValid()){   //Process only non-tunneled IPv4 packets
             ipv4_lpm.apply();
+        }
+        if (hdr.myTunnel.isValid()) {                         //process tunneled packets
+            myTunnel_exact.apply();
         }
     }
 }
@@ -175,10 +196,10 @@ control MyComputeChecksum(inout headers  hdr, inout metadata meta) {
 ***********************  D E P A R S E R  *******************************
 *************************************************************************/
 
-control MyDeparser(packet_out packet, in headers hdr) {
-    apply {
+control MyDeparser(packet_out packet, in headers hdr) {     /*parser so emite hdr quando sao validos, logo n temos de preocupar com a validade aqui*/
+    apply {                               /*a ordem importa, do mais externo para o interno*/
         packet.emit(hdr.ethernet);
-        // TODO: emit myTunnel header as well
+        packet.emit(hdr.myTunnel);        // TODO: emit myTunnel header as well
         packet.emit(hdr.ipv4);
     }
 }
@@ -188,10 +209,10 @@ control MyDeparser(packet_out packet, in headers hdr) {
 *************************************************************************/
 
 V1Switch(
-MyParser(),
-MyVerifyChecksum(),
-MyIngress(),
-MyEgress(),
-MyComputeChecksum(),
-MyDeparser()
+  MyParser(),
+  MyVerifyChecksum(),
+  MyIngress(),
+  MyEgress(),
+  MyComputeChecksum(),
+  MyDeparser()
 ) main;

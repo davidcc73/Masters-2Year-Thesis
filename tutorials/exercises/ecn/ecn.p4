@@ -4,7 +4,7 @@
 
 const bit<8>  TCP_PROTOCOL = 0x06;
 const bit<16> TYPE_IPV4 = 0x800;
-const bit<19> ECN_THRESHOLD = 10;
+const bit<19> ECN_THRESHOLD = 10;													/*se a queue tiver pelo menos este size, o read.me e a solusao uma diz < a outra <=*/
 
 /*************************************************************************
 *********************** H E A D E R S  ***********************************
@@ -21,12 +21,18 @@ header ethernet_t {
 }
 
 /*
- * TODO: split tos to two fields 6 bit diffserv and 2 bit ecn
+ * TODO: split tos to two fields 6 bit diffserv and 2 bit ecn, visto de fora fica  nxn
+ *	00: Non ECN-Capable Transport, Non-ECT
+ *	10: ECN Capable Transport, ECT(0)
+ *	01: ECN Capable Transport, ECT(1)
+ *	11: Congestion Encountered, CE
  */
 header ipv4_t {
     bit<4>    version;
     bit<4>    ihl;
-    bit<8>    tos;
+    /*bit<8>    tos;*/					/*usamos este espaço no header para criar os nosso header*/
+	bit<6>    diffserve;				/*não vamos usar aqui, pelo que percebi*/
+    bit<2>    ecn;						/*se recebemos 1/2 o outro(end-host, nao o outro switch) suporta ECN, podemos por 3 se tivermos demasiado trafego e assim o outro diminui o rate, ao receber o ACK da package que o reciver vai mandar com o 3 ativo*/
     bit<16>   totalLen;
     bit<16>   identification;
     bit<3>    flags;
@@ -127,13 +133,23 @@ control MyIngress(inout headers hdr,
 control MyEgress(inout headers hdr,
                  inout metadata meta,
                  inout standard_metadata_t standard_metadata) {
-    apply {
-        /*
-         * TODO:
-         * - if ecn is 1 or 2
-         *   - compare standard_metadata.enq_qdepth with threshold
-         *     and set hdr.ipv4.ecn to 3 if larger
-         */
+	/*
+	 * TODO:
+	 * - if ecn is 1 or 2
+	 *   - compare standard_metadata.enq_qdepth with threshold
+	 *     and set hdr.ipv4.ecn to 3 if larger
+	 */
+		 
+	action mark_ecn(){
+		hdr.ipv4.ecn = 3;
+	}
+    
+	apply {
+		if(hdr.ipv4.ecn == 1 || hdr.ipv4.ecn == 2){
+			if(ECN_THRESHOLD <= standard_metadata.enq_qdepth ){		//enq_qdepth, comprimento da queue de entrada, é calculado no Traffic Manager que fica entre o Ingress e Egress, so podendo ser avaliado aqui
+				mark_ecn();
+			}
+		}
     }
 }
 
@@ -148,7 +164,9 @@ control MyComputeChecksum(inout headers hdr, inout metadata meta) {
             hdr.ipv4.isValid(),
             { hdr.ipv4.version,
               hdr.ipv4.ihl,
-              hdr.ipv4.tos,
+              /*hdr.ipv4.tos,*/
+			  hdr.ipv4.diffserve,
+			  hdr.ipv4.ecn,
               hdr.ipv4.totalLen,
               hdr.ipv4.identification,
               hdr.ipv4.flags,

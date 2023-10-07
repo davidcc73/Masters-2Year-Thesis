@@ -47,10 +47,10 @@ header ipv4_option_t {
 }
 
 header mri_t {
-    bit<16>  count;
+    bit<16>  count;							/*tipo de header no pacote com so 1 valor, nº de switch pelos quais passámos*/
 }
 
-header switch_t {
+header switch_t {							/*tipo de header no pacote com 2 valores: id so switch pelo qual passamos e a queue de entrada que este tinha quando fomos processados*/
     switchID_t  swid;
     qdepth_t    qdepth;
 }
@@ -72,8 +72,8 @@ struct headers {
     ethernet_t         ethernet;
     ipv4_t             ipv4;
     ipv4_option_t      ipv4_option;
-    mri_t              mri;
-    switch_t[MAX_HOPS] swtraces;
+    mri_t              mri;					/*valor do nº de switch extraido do pacote*/
+    switch_t[MAX_HOPS] swtraces;			/*teremos de o processsar de forma recurssiva, este array extraido*/
 }
 
 error { IPHeaderTooShort }
@@ -115,10 +115,14 @@ parser MyParser(packet_in packet,
         *   - If value is equal to IPV4_OPTION_MRI, transition to parse_mri.
         *   - Otherwise, accept.
         */
-        transition accept;
+		packet.extract(hdr.ipv4_option);
+		transition select(hdr.ipv4_option.option) {				/*.option porque queremos ver o tipo em si*/
+            IPV4_OPTION_MRI: parse_mri;
+            default: accept;
+        }
     }
 
-    state parse_mri {
+    state parse_mri {											/*extrair o numero de switchs*/
         /*
         * TODO: Add logic to:
         * - Extract hdr.mri.
@@ -127,19 +131,30 @@ parser MyParser(packet_in packet,
         *   - If the value is equal to 0, accept.
         *   - Otherwise, transition to parse_swtrace.
         */
-        transition accept;
+        packet.extract(hdr.mri);
+		meta.parser_metadata.remaining = hdr.mri.count;			/*saber quantos switchs pelos quais passámos*/
+		transition select(meta.parser_metadata.remaining) {		/*.option porque queremos ver o tipo em si*/
+            0 : accept;											/*se n ha nenhum header com id,queue, n precisamos de extrair*/
+            default: parse_swtrace;	
+        }
     }
 
-    state parse_swtrace {
+    state parse_swtrace {										/*extrair de forma recurssica quais switchs passámos e as suas queues*/
         /*
         * TODO: Add logic to:
         * - Extract hdr.swtraces.next.
         * - Decrement meta.parser_metadata.remaining by 1
         * - Select on the value of meta.parser_metadata.remaining
         *   - If the value is equal to 0, accept.
-        *   - Otherwise, transition to parse_swtrace.
-        */
-        transition accept;
+        *   - Otherwise, transition to parse_swtrace.			
+        */														//não há loops, entao improvissamos
+																//CORREÇÃO: o packet.extract, retorna valores do header que seja o proximo na fila a extrair, A ORDEM IMPORTA
+		packet.extract(hdr.swtraces.next);						//com .next ele extrai hdr.swtraces atual e faz store no seguinte slot do array swtraces na nossa estrutura hdr
+		meta.parser_metadata.remaining = meta.parser_metadata.remaining - 1;
+		transition select(meta.parser_metadata.remaining) {		//.option porque queremos ver o tipo em si
+            0 : accept;
+            default: parse_swtrace;
+        }
     }
 }
 
@@ -198,7 +213,7 @@ control MyIngress(inout headers hdr,
 control MyEgress(inout headers hdr,
                  inout metadata meta,
                  inout standard_metadata_t standard_metadata) {
-    action add_swtrace(switchID_t swid) {
+    action add_swtrace(switchID_t swid) {							/*como o pacote chegou a nós(um switch), temos de nos adicionar à estatística*/
         /*
         * TODO: add logic to:
         - Increment hdr.mri.count by 1
@@ -209,10 +224,19 @@ control MyEgress(inout headers hdr,
         - Increment hdr.ipv4.totalLen by 8
         - Increment hdr.ipv4_option.optionLength by 8
         */
-    }
+		hdr.mri.count = hdr.mri.count + 1;
+		hdr.swtraces.push_front(1);		//empurramos o array com as estruturas para nos colocarmos no topo
+		hdr.swtraces[0].setValid();		//According to the P4_16 spec, pushed elements are invalid, so we need to call setValid(). Older bmv2 versions would mark the new header(s)	valid automatically (P4_14 behavior), but starting with version 1.11, bmv2 conforms with the P4_16 spec.
+        hdr.swtraces[0].swid = swid;										//na nova estrutura metemos o nosso id, que ja esta registado na nossa tabela
+        hdr.swtraces[0].qdepth = (qdepth_t)standard_metadata.deq_qdepth;	//adicinamos o comprimento da nossa fila
+    
+		hdr.ipv4.ihl = hdr.ipv4.ihl + 2;									//comprimento do header ipv4, em palavras de 32 bits, aqui 2 porque a estrut tem 2 variav de 32bits
+        hdr.ipv4_option.optionLength = hdr.ipv4_option.optionLength + 8;	//comprimento das opcoes em bytes, (32bits = 4 bytes), as opcoes sao opcionais, entao usamos-las para o tracking da rede, como adicionamos 2 var de 32 bits, ajustamos
+        hdr.ipv4.totalLen = hdr.ipv4.totalLen + 8;							//o tamanho total do pacote IPv4, incluindo o cabeçalho e os dados em bytes, por causa da estrutura nova
+	}
 
     table swtrace {
-        actions        = {
+        actions = {
             add_swtrace;
             NoAction;
         }
@@ -226,7 +250,9 @@ control MyEgress(inout headers hdr,
         * - If hdr.mri is valid:
         *   - Apply table swtrace
         */
-        swtrace.apply();
+        if (hdr.mri.isValid()) {		/*estamos a dizer que só fazemos algo aqui se header mri (o de tracking) estiver a ser usado*/
+            swtrace.apply();
+        }
     }
 }
 
@@ -260,10 +286,12 @@ control MyComputeChecksum(inout headers hdr, inout metadata meta) {
 
 control MyDeparser(packet_out packet, in headers hdr) {
     apply {
+		/* TODO: emit ipv4_option, mri and swtraces headers */
         packet.emit(hdr.ethernet);
         packet.emit(hdr.ipv4);
-
-        /* TODO: emit ipv4_option, mri and swtraces headers */
+        packet.emit(hdr.ipv4_option);			/*só adicionámos estes 3 ultimos*/
+        packet.emit(hdr.mri);
+        packet.emit(hdr.swtraces);
     }
 }
 

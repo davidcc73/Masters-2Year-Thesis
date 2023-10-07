@@ -66,22 +66,30 @@ parser MyParser(packet_in packet,
     }
 
     state parse_ethernet {
-        packet.extract(hdr.ethernet);
         /*
          * TODO: Modify the next line to select on hdr.ethernet.etherType
          * If the value is TYPE_SRCROUTING transition to parse_srcRouting
          * otherwise transition to accept.
          */
-        transition accept;
+		packet.extract(hdr.ethernet);
+        transition select(hdr.ethernet.etherType) {
+            TYPE_SRCROUTING: parse_srcRouting;				//se no final formos o ultimo na pilha podemos remover do pacote e por um ipv4 no lugar
+            default: accept;
+        }
     }
 
-    state parse_srcRouting {
+    state parse_srcRouting {								//extração recursiva
         /*
          * TODO: extract the next entry of hdr.srcRoutes
          * while hdr.srcRoutes.last.bos is 0 transition to this state
          * otherwise parse ipv4
          */
-        transition accept;
+		packet.extract(hdr.srcRoutes.next); 		//guardar no proximo array, n esquecer
+		transition select(hdr.srcRoutes.last.bos){	//vamos ao ultimo elemento inserido no array, neste caso o topo por ser uma pilha, e vemos se é o final
+			1: parse_ipv4;							//se o ultimo extraido for o ultimo da pilha n temos mais nada a extrair
+            default: parse_srcRouting;
+			
+		}
     }
 
     state parse_ipv4 {
@@ -119,6 +127,8 @@ control MyIngress(inout headers hdr,
          * to the port in hdr.srcRoutes[0] and
          * pop an entry from hdr.srcRoutes
          */
+		standard_metadata.egress_spec = (bit<9>)hdr.srcRoutes[0].port;		/*def o porto de saida que vem no pacote*/
+        hdr.srcRoutes.pop_front(1);											/*tirar o topo da pilha*/
     }
 
     action srcRoute_finish() {
@@ -130,14 +140,17 @@ control MyIngress(inout headers hdr,
     }
 
     apply {
-        if (hdr.srcRoutes[0].isValid()){
-            /*
-             * TODO: add logic to:
-             * - If final srcRoutes (top of stack has bos==1):
-             *   - change etherType to IP
-             * - choose next hop and remove top of srcRoutes stack
-             */
-
+		/*
+        * TODO: add logic to:
+        * - If final srcRoutes (top of stack has bos==1):
+        *   - change etherType to IP
+        * - choose next hop and remove top of srcRoutes stack
+        */
+        if (hdr.srcRoutes[0].isValid()){		/*ver o que esta no topo da pilha, que seria para nos*/
+            if (hdr.srcRoutes[0].bos == 1){		/*se for ultimo emcaminhamos de forma padrao*/
+                srcRoute_finish();				/*se ultiimo, antes podemos mudar para ipv4*/
+            }													
+            srcRoute_nhop();					/*defenir para qual port mandar agora, mesmo o topo sendo o ultimo ele ainda é referente a nos*/
             if (hdr.ipv4.isValid()){
                 update_ttl();
             }
@@ -161,7 +174,7 @@ control MyEgress(inout headers hdr,
 *************   C H E C K S U M    C O M P U T A T I O N   **************
 *************************************************************************/
 
-control MyComputeChecksum(inout headers hdr, inout metadata meta) {
+control MyComputeChecksum(inout headers  hdr, inout metadata meta) {
     apply {  }
 }
 

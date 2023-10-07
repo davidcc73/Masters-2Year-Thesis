@@ -68,11 +68,17 @@ const bit<8>  P4CALC_OR    = 0x7c;   // '|'
 const bit<8>  P4CALC_CARET = 0x5e;   // '^'
 
 header p4calc_t {
+	/* TODO
+	 * fill p4calc_t header with P, four, ver, op, operand_a, operand_b, and res
+	   entries based on above protocol header definition.
+	 */
+    bit<8>  p;
+    bit<8>  four;
+    bit<8>  ver;
     bit<8>  op;
-/* TODO
- * fill p4calc_t header with P, four, ver, op, operand_a, operand_b, and res
-   entries based on above protocol header definition.
- */
+    bit<32> operand_a;				/*inteiros de 32 bits?*/
+    bit<32> operand_b;
+    bit<32> res;
 }
 
 /*
@@ -113,18 +119,16 @@ parser MyParser(packet_in packet,
 
     state check_p4calc {
         /* TODO: just uncomment the following parse block */
-        /*
-        transition select(packet.lookahead<p4calc_t>().p,
+        transition select(packet.lookahead<p4calc_t>().p,			/*SEM EXTRAIR O PACOTE, vamos avaliar assumindo que seja do tipo p4calc_t*/
         packet.lookahead<p4calc_t>().four,
         packet.lookahead<p4calc_t>().ver) {
-            (P4CALC_P, P4CALC_4, P4CALC_VER) : parse_p4calc;
+            (P4CALC_P, P4CALC_4, P4CALC_VER) : parse_p4calc;		/*se o valor for p40.1, entao entao sabeos que estamos no mesmo protocolo*/
             default                          : accept;
         }
-        */
     }
 
     state parse_p4calc {
-        packet.extract(hdr.p4calc);
+        packet.extract(hdr.p4calc);									/*agora sim, vamos extrair a info para a conta*/
         transition accept;
     }
 }
@@ -143,35 +147,51 @@ control MyVerifyChecksum(inout headers hdr,
 control MyIngress(inout headers hdr,
                   inout metadata meta,
                   inout standard_metadata_t standard_metadata) {
+				  
     action send_back(bit<32> result) {
         /* TODO
-         * - put the result back in hdr.p4calc.res
-         * - swap MAC addresses in hdr.ethernet.dstAddr and
-         *   hdr.ethernet.srcAddr using a temp variable
-         * - Send the packet back to the port it came from
-             by saving standard_metadata.ingress_port into
-             standard_metadata.egress_spec
-         */
+        * - put the result back in hdr.p4calc.res
+        * - swap MAC addresses in hdr.ethernet.dstAddr and
+        *   hdr.ethernet.srcAddr using a temp variable
+        * - Send the packet back to the port it came from
+            by saving standard_metadata.ingress_port into
+            standard_metadata.egress_spec
+        */
+		 
+		bit<48> tmp;					/*para ajudar no swap, pelos visto MAC addresses sao de 48 bits*/
+		hdr.p4calc.res = result;
+		 
+		tmp = hdr.ethernet.dstAddr;
+        hdr.ethernet.dstAddr = hdr.ethernet.srcAddr;
+        hdr.ethernet.srcAddr = tmp;
+		
+		standard_metadata.egress_spec = standard_metadata.ingress_port;
+		 
     }
 
     action operation_add() {
         /* TODO call send_back with operand_a + operand_b */
+		send_back(hdr.p4calc.operand_a + hdr.p4calc.operand_b);
     }
 
     action operation_sub() {
         /* TODO call send_back with operand_a - operand_b */
+		send_back(hdr.p4calc.operand_a - hdr.p4calc.operand_b);
     }
 
     action operation_and() {
         /* TODO call send_back with operand_a & operand_b */
+		send_back(hdr.p4calc.operand_a & hdr.p4calc.operand_b);
     }
 
     action operation_or() {
         /* TODO call send_back with operand_a | operand_b */
+		send_back(hdr.p4calc.operand_a | hdr.p4calc.operand_b);
     }
 
     action operation_xor() {
         /* TODO call send_back with operand_a ^ operand_b */
+		send_back(hdr.p4calc.operand_a ^ hdr.p4calc.operand_b);
     }
 
     action operation_drop() {

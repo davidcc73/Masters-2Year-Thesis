@@ -41,7 +41,9 @@ header ethernet_t {
 header ipv4_t {
     bit<4>    version;
     bit<4>    ihl;
-    bit<8>    tos;
+    //bit<8>    tos;
+	bit<6>    diffserv;
+    bit<2>    ecn;
     bit<16>   totalLen;
     bit<16>   identification;
     bit<3>    flags;
@@ -118,8 +120,32 @@ control MyIngress(inout headers hdr,
     }
 
 /* TODO: Implement actions for different traffic classes */
+	/* Default Forwarding */
+    action default_forwarding() {
+        hdr.ipv4.diffserv = 0;
+    }
 
+    /* Expedited Forwarding */
+    action expedited_forwarding() {
+        hdr.ipv4.diffserv = 46;
+    }
 
+    /* Voice Admit */		
+    action voice_admit() {						/*só exemplos de serviço opcion, a soluçao tem muitos mais*/
+        hdr.ipv4.diffserv = 44;
+    }
+
+    /* Assured Forwarding */
+    /* Class 1 Low drop probability */
+    action af_11() {
+        hdr.ipv4.diffserv = 10;
+    }
+
+    /* Class 1 Med drop probability */
+    action af_12() {
+        hdr.ipv4.diffserv = 12;
+    }
+	
     table ipv4_lpm {
         key = {
             hdr.ipv4.dstAddr: lpm;
@@ -134,8 +160,14 @@ control MyIngress(inout headers hdr,
     }
 
 /* TODO: set hdr.ipv4.diffserv on the basis of protocol */
-    apply {
-        if (hdr.ipv4.isValid()) {
+    apply{
+        if (hdr.ipv4.isValid()) {					/*classificamos como bem entendermos depos*/
+            if (hdr.ipv4.protocol == IP_PROTOCOLS_UDP) {
+                expedited_forwarding();
+            }
+            else if (hdr.ipv4.protocol == IP_PROTOCOLS_TCP) {
+                voice_admit();
+            }
             ipv4_lpm.apply();
         }
     }
@@ -163,7 +195,9 @@ control MyComputeChecksum(inout headers hdr, inout metadata meta) {
             hdr.ipv4.isValid(),
             { hdr.ipv4.version,
               hdr.ipv4.ihl,
-              hdr.ipv4.tos,
+              //hdr.ipv4.tos,
+			  hdr.ipv4.diffserv,
+			  hdr.ipv4.ecn,
               hdr.ipv4.totalLen,
               hdr.ipv4.identification,
               hdr.ipv4.flags,

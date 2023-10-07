@@ -133,14 +133,14 @@ control MyIngress(inout headers hdr,
 
     action compute_hashes(ip4Addr_t ipAddr1, ip4Addr_t ipAddr2, bit<16> port1, bit<16> port2){
        //Get register position
-       hash(reg_pos_one, HashAlgorithm.crc16, (bit<32>)0, {ipAddr1,
+       hash(reg_pos_one, HashAlgorithm.crc16, (bit<32>)0, {ipAddr1,								/*calcular a posicao usada pela conexao do pacote atual, para o filtro1*/
                                                            ipAddr2,
                                                            port1,
                                                            port2,
                                                            hdr.ipv4.protocol},
                                                            (bit<32>)BLOOM_FILTER_ENTRIES);
 
-       hash(reg_pos_two, HashAlgorithm.crc32, (bit<32>)0, {ipAddr1,
+       hash(reg_pos_two, HashAlgorithm.crc32, (bit<32>)0, {ipAddr1,								/*calcular a posicao usada pela conexao do pacote atual, para o filtro2*/
                                                            ipAddr2,
                                                            port1,
                                                            port2,
@@ -168,7 +168,7 @@ control MyIngress(inout headers hdr,
         default_action = drop();
     }
 
-    action set_direction(bit<1> dir) {
+    action set_direction(bit<1> dir) {				//para sabermos o snetido do trafego, 0 para sair
         direction = dir;
     }
 
@@ -190,9 +190,9 @@ control MyIngress(inout headers hdr,
             ipv4_lpm.apply();
             if (hdr.tcp.isValid()){
                 direction = 0; // default
-                if (check_ports.apply().hit) {
+                if (check_ports.apply().hit) {					//so seguimos se tiver havido uma entrada na tabela apos a aplicaçao
                     // test and set the bloom filter
-                    if (direction == 0) {
+                    if (direction == 0) {						//aplicamos 2 hashs so 2 call pois sso é importante para garantir que os valores calculados na função hash sejam os mesmos, independentemente de o pacote estar indo para dentro ou para fora da rede
                         compute_hashes(hdr.ipv4.srcAddr, hdr.ipv4.dstAddr, hdr.tcp.srcPort, hdr.tcp.dstPort);
                     }
                     else {
@@ -203,12 +203,24 @@ control MyIngress(inout headers hdr,
                         // TODO: this packet is part of an outgoing TCP connection.
                         //   We need to set the bloom filter if this is a SYN packet
                         //   E.g. bloom_filter_1.write(<index>, <value>);
+						if (hdr.tcp.syn == 1){
+                            bloom_filter_1.write(reg_pos_one, 1);			//se for para cria uma conecao, def o novo filtro, para que a resposta conseguirá passar por este
+                            bloom_filter_2.write(reg_pos_two, 1);			//na posicao reg_pos_two do filtro, escrevemos 1, usando 2 filtros a chance de falhar é quase nula
+                        }
                     }
                     // Packet comes from outside
                     else if (direction == 1){
                         // TODO: this packet is part of an incomming TCP connection.
                         //   We need to check if this packet is allowed to pass by reading the bloom filter
                         //   E.g. bloom_filter_1.read(<value>, <index>);
+						
+						// Read bloom filter cells to check if there are 1's
+                        bloom_filter_1.read(reg_val_one, reg_pos_one);					
+                        bloom_filter_2.read(reg_val_two, reg_pos_two);		//copia para reg_val_two o valor do campo reg_pos_two do filtro, 
+                        // only allow flow to pass if both entries are set
+                        if (reg_val_one != 1 || reg_val_two != 1){			//conecoes aprovadas tem valor 1 colocado durante o SYN, logo é conecao aprovada
+                            drop();	
+                        }
                     }
                 }
             }

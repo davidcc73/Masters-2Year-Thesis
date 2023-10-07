@@ -57,7 +57,7 @@ for `h1`, `h11`, `h2`, `h22`, respectively:
    ```
 3. In `h2`'s XTerm, start the server that captures packets:
    ```bash
-   ./receive.py
+   python3 ./receive.py
    ```
 4. in `h22`'s XTerm, start the iperf UDP server:
    ```bash
@@ -66,7 +66,7 @@ for `h1`, `h11`, `h2`, `h22`, respectively:
 5. In `h1`'s XTerm, send one packet per second to `h2` using send.py
 say for 30 seconds:
    ```bash
-   ./send.py 10.0.2.2 "P4 is cool" 30
+   python3 ./send.py 10.0.2.2 "P4 is cool" 30
    ```
    The message "P4 is cool" should be received in `h2`'s xterm,
 6. In `h11`'s XTerm, start iperf client sending for 15 seconds

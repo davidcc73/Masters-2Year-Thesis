@@ -63,7 +63,7 @@ in Mininet to test its behavior.
    hosts in the topology:
    ```bash
    mininet> h1 ping h2
-   mininet> pingall
+   mininet> pingall																/*no nosso caso sera a operacao padrao quando n sabemos o endereço*/
    ```
 3. Type `exit` to leave each xterm and the Mininet command line.
    Then, to stop mininet:

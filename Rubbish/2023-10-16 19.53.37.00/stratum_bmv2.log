@@ -1,0 +1,45 @@
+stratum_bmv2 -device_id=1 -chassis_config_file=/tmp/spine2/chassis-config.txt -forwarding_pipeline_configs_file=/tmp/spine2/pipe.txt -persistent_config_dir=/tmp/spine2 -initial_pipeline=/root/dummy.json -cpu_port=255 -external_stratum_urls=0.0.0.0:50004 -local_stratum_url=localhost:42153 -max_num_controllers_per_node=10 -write_req_log_file=/tmp/spine2/write-reqs.txt -logtosyslog=false -logtostderr=true -bmv2_log_level=warn
+
+--------------------------------------------------------------------------------
+
+E1016 17:15:23.613507   148 main.cc:121] Starting bmv2 simple_switch and waiting for P4 pipeline
+W1016 17:15:23.644484   148 credentials_manager.cc:45] Using insecure server credentials
+I1016 17:15:23.664502   148 timer_daemon.cc:90] The timer daemon has been started.
+I1016 17:15:23.664573   148 hal.cc:128] Setting up HAL in COLDBOOT mode...
+I1016 17:15:23.664650   148 config_monitoring_service.cc:90] Pushing the saved chassis config read from /tmp/spine2/chassis-config.txt...
+I1016 17:15:23.675228   148 bmv2_chassis_manager.cc:476] Registered port status callbacks successfully for node 1.
+I1016 17:15:23.675292   148 bmv2_chassis_manager.cc:61] Adding port 1 to node 1
+I1016 17:15:23.728441   148 bmv2_chassis_manager.cc:61] Adding port 2 to node 1
+I1016 17:15:23.778038   148 p4_service.cc:119] Pushing the saved forwarding pipeline configs read from /tmp/spine2/pipe.txt...
+E1016 17:15:23.778126   148 utils.cc:109] StratumErrorSpace::ERR_FILE_NOT_FOUND: /tmp/spine2/pipe.txt not found.
+E1016 17:15:23.778440   148 utils.cc:65] Return Error: ReadFileToString(filename, &text) failed with StratumErrorSpace::ERR_FILE_NOT_FOUND: /tmp/spine2/pipe.txt not found.
+W1016 17:15:23.778453   148 p4_service.cc:128] No saved forwarding pipeline config found at /tmp/spine2/pipe.txt. This is normal when the switch is just installed and no master controller is connected yet.
+E1016 17:15:23.786554276     148 server_chttp2.cc:40]        {"created":"@1697476523.786517141","description":"Only 1 addresses added out of total 2 resolved","file":"external/com_github_grpc_grpc/src/core/ext/transport/chttp2/server/chttp2_server.cc","file_line":406,"referenced_errors":[{"created":"@1697476523.786513739","description":"Address family not supported by protocol","errno":97,"file":"external/com_github_grpc_grpc/src/core/lib/iomgr/socket_utils_common_posix.cc","file_line":420,"os_error":"Address family not supported by protocol","syscall":"socket","target_address":"[::1]:42153"}]}
+E1016 17:15:23.788601   148 hal.cc:223] Stratum external facing services are listening to 0.0.0.0:50004, localhost:42153...
+I1016 17:15:23.850018   211 bmv2_chassis_manager.cc:409] State of port 1 in node 1: UP.
+I1016 17:15:23.850464   211 bmv2_chassis_manager.cc:409] State of port 2 in node 1: UP.
+open: No such file or directory
+I1016 18:53:09.210489   211 bmv2_chassis_manager.cc:409] State of port 1 in node 1: DOWN.
+open: No such file or directory
+open: No such file or directory
+I1016 18:53:09.411026   211 bmv2_chassis_manager.cc:409] State of port 2 in node 1: DOWN.
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+I1016 18:53:11.164534   148 hal.cc:244] Received signal: Terminated
+I1016 18:53:11.177392   148 hal.cc:165] Shutting down HAL...
+I1016 18:53:11.185536   148 timer_daemon.cc:108] The timer daemon has been stopped.
+I1016 18:53:11.185719   148 main.cc:171] See you later!

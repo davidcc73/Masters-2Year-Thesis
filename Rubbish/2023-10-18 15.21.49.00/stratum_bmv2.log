@@ -1,0 +1,147 @@
+E1018 14:18:50.433964    74 main.cc:121] Starting bmv2 simple_switch and waiting for P4 pipeline
+[14:18:50.438] [bmv2] [D] [thread 74] Set default default entry for table 't_drop': a_drop - 
+[14:18:50.447] [bmv2] [D] [thread 74] Adding interface veth0 as port 1
+[14:18:50.468] [bmv2] [D] [thread 74] Adding interface veth2 as port 2
+[14:18:50.508] [bmv2] [D] [thread 74] Adding interface veth4 as port 3
+[14:18:50.540] [bmv2] [D] [thread 74] Adding interface veth6 as port 4
+[14:18:50.576] [bmv2] [D] [thread 74] Adding interface veth8 as port 5
+[14:18:50.616] [bmv2] [D] [thread 74] Adding interface veth10 as port 6
+[14:18:50.648] [bmv2] [D] [thread 74] Adding interface veth12 as port 7
+[14:18:50.679] [bmv2] [D] [thread 74] Adding interface veth14 as port 8
+E1018 14:18:50.729534144      74 server_chttp2.cc:40]        {"created":"@1697638730.729493186","description":"Only 1 addresses added out of total 2 resolved","file":"external/com_github_grpc_grpc/src/core/ext/transport/chttp2/server/chttp2_server.cc","file_line":406,"referenced_errors":[{"created":"@1697638730.729489430","description":"Address family not supported by protocol","errno":97,"file":"external/com_github_grpc_grpc/src/core/lib/iomgr/socket_utils_common_posix.cc","file_line":420,"os_error":"Address family not supported by protocol","syscall":"socket","target_address":"[::1]:28000"}]}
+E1018 14:18:50.729753    74 hal.cc:223] Stratum external facing services are listening to 0.0.0.0:28000, localhost:28000...
+[14:18:52.534] [bmv2] [D] [thread 107] Set default default entry for table 'tbl_act': act - 
+[14:18:52.534] [bmv2] [D] [thread 107] Set default default entry for table 'tbl_act_0': act_3 - 
+[14:18:52.534] [bmv2] [D] [thread 107] Set default default entry for table 'IngressPipeImpl.ndp_reply_table': NoAction - 
+[14:18:52.534] [bmv2] [D] [thread 107] Set default default entry for table 'tbl_act_1': act_0 - 
+[14:18:52.534] [bmv2] [D] [thread 107] Set default default entry for table 'tbl_act_2': act_1 - 
+[14:18:52.534] [bmv2] [D] [thread 107] Set default default entry for table 'tbl_act_3': act_2 - 
+[14:18:52.534] [bmv2] [D] [thread 107] Set default default entry for table 'tbl_act_4': act_4 - 
+[14:18:52.534] [bmv2] [D] [thread 107] Set default default entry for table 'IngressPipeImpl.my_station_table': NoAction - 
+[14:18:52.534] [bmv2] [D] [thread 107] Set default default entry for table 'tbl_act_5': act_5 - 
+[14:18:52.535] [bmv2] [D] [thread 107] Set default default entry for table 'tbl_act_6': act_6 - 
+[14:18:52.535] [bmv2] [D] [thread 107] Set default default entry for table 'tbl_act_7': act_7 - 
+[14:18:52.535] [bmv2] [D] [thread 107] Set default default entry for table 'tbl_drop': IngressPipeImpl.drop - 
+[14:18:52.535] [bmv2] [D] [thread 107] Set default default entry for table 'IngressPipeImpl.l2_exact_table': IngressPipeImpl.drop - 
+[14:18:52.535] [bmv2] [D] [thread 107] Set default default entry for table 'tbl_act_8': act_8 - 
+[14:18:52.535] [bmv2] [D] [thread 107] Set default default entry for table 'tbl_act_9': act_9 - 
+[14:18:52.535] [bmv2] [D] [thread 107] Set default default entry for table 'IngressPipeImpl.l2_ternary_table': IngressPipeImpl.drop - 
+[14:18:52.535] [bmv2] [D] [thread 107] Set default default entry for table 'IngressPipeImpl.acl_table': NoAction - 
+[14:18:52.537] [bmv2] [D] [thread 107] Set default default entry for table 'tbl_act_10': act_10 - 
+[14:18:52.537] [bmv2] [D] [thread 107] Set default default entry for table 'tbl_act_11': act_11 - 
+[14:18:52.852] [bmv2] [D] [thread 107] Entry 0 added to table 'IngressPipeImpl.my_station_table'
+[14:18:52.852] [bmv2] [D] [thread 107] Dumping entry 0
+Match key:
+* hdr.ethernet.dst_addr: EXACT     000102030405
+Action entry: NoAction - 
+
+[14:18:52.854] [bmv2] [D] [thread 140] Removed entry 0 from table 'IngressPipeImpl.my_station_table'
+[14:18:52.905] [bmv2] [D] [thread 107] Entry 0 added to table 'IngressPipeImpl.ndp_reply_table'
+[14:18:52.905] [bmv2] [D] [thread 107] Dumping entry 0
+Match key:
+* hdr.ndp.target_ipv6_addr: EXACT     20010000000100000000000000000001
+Action entry: IngressPipeImpl.ndp_ns_to_na - aa01,
+
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Processing packet received on port 1
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Parser 'parser': start
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Parser 'parser' entering state 'start'
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Parser state 'start': key is 0001
+[14:18:52.911] [bmv2] [T] [thread 78] [0.0] [cxt 0] Bytes parsed: 0
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Parser 'parser' entering state 'parse_ethernet'
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Extracting header 'ethernet'
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Parser state 'parse_ethernet': key is 86dd
+[14:18:52.911] [bmv2] [T] [thread 78] [0.0] [cxt 0] Bytes parsed: 14
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Parser 'parser' entering state 'parse_ipv6'
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Extracting header 'ipv6'
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Parser set: setting field 'scalars.local_metadata_t.ip_proto' from field 'ipv6.next_hdr' (58)
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Parser state 'parse_ipv6': key is 3a
+[14:18:52.911] [bmv2] [T] [thread 78] [0.0] [cxt 0] Bytes parsed: 54
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Parser 'parser' entering state 'parse_icmpv6'
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Extracting header 'icmpv6'
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Parser set: setting field 'scalars.local_metadata_t.icmp_type' from field 'icmpv6.type' (135)
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Parser state 'parse_icmpv6': key is 87
+[14:18:52.911] [bmv2] [T] [thread 78] [0.0] [cxt 0] Bytes parsed: 58
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Parser 'parser' entering state 'parse_ndp'
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Extracting header 'ndp'
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Parser state 'parse_ndp' has no switch, going to default next state
+[14:18:52.911] [bmv2] [T] [thread 78] [0.0] [cxt 0] Bytes parsed: 86
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Parser 'parser': end
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Pipeline 'ingress': start
+[14:18:52.911] [bmv2] [T] [thread 78] [0.0] [cxt 0] p4src/main.p4(579) Condition "hdr.cpu_out.isValid()" (node_2) is false
+[14:18:52.911] [bmv2] [T] [thread 78] [0.0] [cxt 0] Applying table 'tbl_act_0'
+[14:18:52.911] [bmv2] [D] [thread 78] [0.0] [cxt 0] Looking up key:
+
+[14:18:52.912] [bmv2] [D] [thread 78] [0.0] [cxt 0] Table 'tbl_act_0': miss
+[14:18:52.912] [bmv2] [D] [thread 78] [0.0] [cxt 0] Action entry is act_3 - 
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] Action act_3
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] p4src/main.p4(592) Primitive bool do_l3_l2 = true;
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] p4src/main.p4(594) Condition "hdr.icmpv6.isValid() && hdr.icmpv6.type == ICMP6_TYPE_NS" (node_5) is true
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] Applying table 'IngressPipeImpl.ndp_reply_table'
+[14:18:52.912] [bmv2] [D] [thread 78] [0.0] [cxt 0] Looking up key:
+* hdr.ndp.target_ipv6_addr: 20010000000100000000000000000001
+
+[14:18:52.912] [bmv2] [D] [thread 78] [0.0] [cxt 0] Table 'IngressPipeImpl.ndp_reply_table': hit with handle 0
+[14:18:52.912] [bmv2] [D] [thread 78] [0.0] [cxt 0] Dumping entry 0
+Match key:
+* hdr.ndp.target_ipv6_addr: EXACT     20010000000100000000000000000001
+Action entry: IngressPipeImpl.ndp_ns_to_na - aa01,
+
+[14:18:52.912] [bmv2] [D] [thread 78] [0.0] [cxt 0] Action entry is IngressPipeImpl.ndp_ns_to_na - aa01,
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] Action IngressPipeImpl.ndp_ns_to_na
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] p4src/main.p4(462) Primitive hdr.ethernet.src_addr = target_mac
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] p4src/main.p4(55) Primitive 0x33_33_00_00_00_01; ...
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] p4src/main.p4(464) Primitive ipv6_addr_t host_ipv6_tmp = hdr.ipv6.src_addr;
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] p4src/main.p4(465) Primitive hdr.ipv6.src_addr = hdr.ndp.target_ipv6_addr
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] p4src/main.p4(466) Primitive hdr.ipv6.dst_addr = host_ipv6_tmp
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] p4src/main.p4(53) Primitive 58; ...
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] p4src/main.p4(58) Primitive 136; ...
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] p4src/main.p4(469) Primitive hdr.ndp.flags = NDP_FLAG_ROUTER | NDP_FLAG_OVERRIDE
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] p4src/main.p4(60) Primitive 2; ...
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] p4src/main.p4(471) Primitive hdr.ndp.length = 1
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] p4src/main.p4(472) Primitive hdr.ndp.target_mac_addr = target_mac
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] p4src/main.p4(473) Primitive standard_metadata.egress_spec = standard_metadata.ingress_port
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] Applying table 'tbl_act_1'
+[14:18:52.912] [bmv2] [D] [thread 78] [0.0] [cxt 0] Looking up key:
+
+[14:18:52.912] [bmv2] [D] [thread 78] [0.0] [cxt 0] Table 'tbl_act_1': miss
+[14:18:52.912] [bmv2] [D] [thread 78] [0.0] [cxt 0] Action entry is act_0 - 
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] Action act_0
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] Primitive (no source info)
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] Condition "node_9" (node_9) is true
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] Applying table 'tbl_act_3'
+[14:18:52.912] [bmv2] [D] [thread 78] [0.0] [cxt 0] Looking up key:
+
+[14:18:52.912] [bmv2] [D] [thread 78] [0.0] [cxt 0] Table 'tbl_act_3': miss
+[14:18:52.912] [bmv2] [D] [thread 78] [0.0] [cxt 0] Action entry is act_2 - 
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] Action act_2
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] p4src/main.p4(602) Primitive do_l3_l2 = false
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] p4src/main.p4(606) Condition "do_l3_l2" (node_11) is false
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] Applying table 'IngressPipeImpl.acl_table'
+[14:18:52.912] [bmv2] [D] [thread 78] [0.0] [cxt 0] Looking up key:
+* standard_metadata.ingress_port: 0001
+* hdr.ethernet.dst_addr         : 333300000001
+* hdr.ethernet.src_addr         : 00000000aa01
+* hdr.ethernet.ether_type       : 86dd
+* local_metadata.ip_proto       : 3a
+* local_metadata.icmp_type      : 87
+* local_metadata.l4_src_port    : 0000
+* local_metadata.l4_dst_port    : 0000
+
+[14:18:52.912] [bmv2] [D] [thread 78] [0.0] [cxt 0] Table 'IngressPipeImpl.acl_table': miss
+[14:18:52.912] [bmv2] [D] [thread 78] [0.0] [cxt 0] Action entry is NoAction - 
+[14:18:52.912] [bmv2] [T] [thread 78] [0.0] [cxt 0] Action NoAction
+[14:18:52.912] [bmv2] [D] [thread 78] [0.0] [cxt 0] Pipeline 'ingress': end
+[14:18:52.912] [bmv2] [D] [thread 78] [0.0] [cxt 0] Egress port is 1
+[14:18:52.912] [bmv2] [D] [thread 80] [0.0] [cxt 0] Pipeline 'egress': start
+[14:18:52.912] [bmv2] [T] [thread 80] [0.0] [cxt 0] p4src/main.p4(655) Condition "standard_metadata.egress_port == 255" (node_29) is false
+[14:18:52.913] [bmv2] [T] [thread 80] [0.0] [cxt 0] p4src/main.p4(673) Condition "local_metadata.is_multicast == true && ..." (node_31) is false
+[14:18:52.913] [bmv2] [D] [thread 80] [0.0] [cxt 0] Pipeline 'egress': end
+[14:18:52.913] [bmv2] [D] [thread 80] [0.0] [cxt 0] Deparser 'deparser': start
+[14:18:52.913] [bmv2] [D] [thread 80] [0.0] [cxt 0] Updating checksum 'cksum'
+[14:18:52.913] [bmv2] [D] [thread 80] [0.0] [cxt 0] Deparsing header 'ethernet'
+[14:18:52.913] [bmv2] [D] [thread 80] [0.0] [cxt 0] Deparsing header 'ipv6'
+[14:18:52.913] [bmv2] [D] [thread 80] [0.0] [cxt 0] Deparsing header 'icmpv6'
+[14:18:52.913] [bmv2] [D] [thread 80] [0.0] [cxt 0] Deparsing header 'ndp'
+[14:18:52.913] [bmv2] [D] [thread 80] [0.0] [cxt 0] Deparser 'deparser': end
+[14:18:52.913] [bmv2] [D] [thread 83] [0.0] [cxt 0] Transmitting packet of size 86 out of port 1
+[14:18:52.917] [bmv2] [D] [thread 144] Removed entry 0 from table 'IngressPipeImpl.ndp_reply_table'

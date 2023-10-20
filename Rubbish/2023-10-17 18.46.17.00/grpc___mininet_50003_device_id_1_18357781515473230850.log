@@ -1,0 +1,8375 @@
+*** 2023-10-16 21:06:05.375 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1892]
+Metadata()
+
+*** 2023-10-16 21:06:05.505 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1892]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:06:05.608 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1892]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:06:05.623 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1892]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:07.946 - p4.v1.P4Runtime/Read STARTED [callId=1893]
+Metadata()
+
+*** 2023-10-16 21:06:07.946 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1893]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:07.949 - p4.v1.P4Runtime/Read << INBOUND << [callId=1893]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:07.949 - p4.v1.P4Runtime/Read CLOSED [callId=1893]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:11.608 - p4.v1.P4Runtime/Read STARTED [callId=1894]
+Metadata()
+
+*** 2023-10-16 21:06:11.608 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1894]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:11.610 - p4.v1.P4Runtime/Read << INBOUND << [callId=1894]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:11.610 - p4.v1.P4Runtime/Read CLOSED [callId=1894]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:13.457 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1895]
+Metadata()
+
+*** 2023-10-16 21:06:13.457 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1895]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:06:13.460 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1895]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:06:13.461 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1895]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:13.577 - gnmi.gNMI/Get STARTED [callId=1896]
+Metadata()
+
+*** 2023-10-16 21:06:13.577 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1896]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:06:13.584 - gnmi.gNMI/Get << INBOUND << [callId=1896]
+notification {
+  timestamp: 1697490373578751156
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:06:13.584 - gnmi.gNMI/Get CLOSED [callId=1896]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:15.634 - p4.v1.P4Runtime/Read STARTED [callId=1897]
+Metadata()
+
+*** 2023-10-16 21:06:15.635 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1897]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:15.642 - p4.v1.P4Runtime/Read << INBOUND << [callId=1897]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:15.644 - p4.v1.P4Runtime/Read CLOSED [callId=1897]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:19.631 - p4.v1.P4Runtime/Read STARTED [callId=1898]
+Metadata()
+
+*** 2023-10-16 21:06:19.633 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1898]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:19.638 - p4.v1.P4Runtime/Read << INBOUND << [callId=1898]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:19.639 - p4.v1.P4Runtime/Read CLOSED [callId=1898]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:20.234 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1899]
+Metadata()
+
+*** 2023-10-16 21:06:20.234 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1899]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:06:20.236 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1899]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:06:20.237 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1899]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:23.457 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1900]
+Metadata()
+
+*** 2023-10-16 21:06:23.459 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1900]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:06:23.463 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1900]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:06:23.463 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1900]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:23.577 - gnmi.gNMI/Get STARTED [callId=1901]
+Metadata()
+
+*** 2023-10-16 21:06:23.577 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1901]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:06:23.581 - gnmi.gNMI/Get << INBOUND << [callId=1901]
+notification {
+  timestamp: 1697490383578836277
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:06:23.581 - gnmi.gNMI/Get CLOSED [callId=1901]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:23.631 - p4.v1.P4Runtime/Read STARTED [callId=1902]
+Metadata()
+
+*** 2023-10-16 21:06:23.631 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1902]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:23.633 - p4.v1.P4Runtime/Read << INBOUND << [callId=1902]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:23.633 - p4.v1.P4Runtime/Read CLOSED [callId=1902]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:27.606 - p4.v1.P4Runtime/Read STARTED [callId=1903]
+Metadata()
+
+*** 2023-10-16 21:06:27.607 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1903]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:27.609 - p4.v1.P4Runtime/Read << INBOUND << [callId=1903]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:27.609 - p4.v1.P4Runtime/Read CLOSED [callId=1903]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:31.614 - p4.v1.P4Runtime/Read STARTED [callId=1904]
+Metadata()
+
+*** 2023-10-16 21:06:31.615 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1904]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:31.629 - p4.v1.P4Runtime/Read << INBOUND << [callId=1904]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:31.629 - p4.v1.P4Runtime/Read CLOSED [callId=1904]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:33.469 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1905]
+Metadata()
+
+*** 2023-10-16 21:06:33.469 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1905]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:06:33.471 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1905]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:06:33.475 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1905]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:33.578 - gnmi.gNMI/Get STARTED [callId=1906]
+Metadata()
+
+*** 2023-10-16 21:06:33.578 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1906]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:06:33.583 - gnmi.gNMI/Get << INBOUND << [callId=1906]
+notification {
+  timestamp: 1697490393580834645
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:06:33.583 - gnmi.gNMI/Get CLOSED [callId=1906]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:35.224 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1907]
+Metadata()
+
+*** 2023-10-16 21:06:35.224 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1907]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:06:35.226 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1907]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:06:35.226 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1907]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:35.608 - p4.v1.P4Runtime/Read STARTED [callId=1908]
+Metadata()
+
+*** 2023-10-16 21:06:35.608 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1908]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:35.610 - p4.v1.P4Runtime/Read << INBOUND << [callId=1908]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:35.611 - p4.v1.P4Runtime/Read CLOSED [callId=1908]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:39.604 - p4.v1.P4Runtime/Read STARTED [callId=1909]
+Metadata()
+
+*** 2023-10-16 21:06:39.604 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1909]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:39.605 - p4.v1.P4Runtime/Read << INBOUND << [callId=1909]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:39.607 - p4.v1.P4Runtime/Read CLOSED [callId=1909]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:43.468 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1910]
+Metadata()
+
+*** 2023-10-16 21:06:43.469 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1910]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:06:43.484 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1910]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:06:43.485 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1910]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:43.578 - gnmi.gNMI/Get STARTED [callId=1911]
+Metadata()
+
+*** 2023-10-16 21:06:43.579 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1911]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:06:43.584 - gnmi.gNMI/Get << INBOUND << [callId=1911]
+notification {
+  timestamp: 1697490403580951936
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:06:43.584 - gnmi.gNMI/Get CLOSED [callId=1911]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:43.657 - p4.v1.P4Runtime/Read STARTED [callId=1912]
+Metadata()
+
+*** 2023-10-16 21:06:43.658 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1912]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:43.665 - p4.v1.P4Runtime/Read << INBOUND << [callId=1912]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:43.665 - p4.v1.P4Runtime/Read CLOSED [callId=1912]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:47.605 - p4.v1.P4Runtime/Read STARTED [callId=1913]
+Metadata()
+
+*** 2023-10-16 21:06:47.606 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1913]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:47.609 - p4.v1.P4Runtime/Read << INBOUND << [callId=1913]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:47.610 - p4.v1.P4Runtime/Read CLOSED [callId=1913]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:50.223 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1914]
+Metadata()
+
+*** 2023-10-16 21:06:50.223 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1914]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:06:50.226 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1914]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:06:50.227 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1914]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:51.614 - p4.v1.P4Runtime/Read STARTED [callId=1915]
+Metadata()
+
+*** 2023-10-16 21:06:51.615 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1915]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:51.617 - p4.v1.P4Runtime/Read << INBOUND << [callId=1915]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:51.617 - p4.v1.P4Runtime/Read CLOSED [callId=1915]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:53.458 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1916]
+Metadata()
+
+*** 2023-10-16 21:06:53.458 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1916]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:06:53.461 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1916]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:06:53.461 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1916]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:53.582 - gnmi.gNMI/Get STARTED [callId=1917]
+Metadata()
+
+*** 2023-10-16 21:06:53.582 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1917]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:06:53.586 - gnmi.gNMI/Get << INBOUND << [callId=1917]
+notification {
+  timestamp: 1697490413584001037
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:06:53.586 - gnmi.gNMI/Get CLOSED [callId=1917]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:55.603 - p4.v1.P4Runtime/Read STARTED [callId=1918]
+Metadata()
+
+*** 2023-10-16 21:06:55.603 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1918]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:55.605 - p4.v1.P4Runtime/Read << INBOUND << [callId=1918]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:55.605 - p4.v1.P4Runtime/Read CLOSED [callId=1918]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:06:59.604 - p4.v1.P4Runtime/Read STARTED [callId=1919]
+Metadata()
+
+*** 2023-10-16 21:06:59.605 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1919]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:59.606 - p4.v1.P4Runtime/Read << INBOUND << [callId=1919]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:06:59.607 - p4.v1.P4Runtime/Read CLOSED [callId=1919]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:03.457 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1920]
+Metadata()
+
+*** 2023-10-16 21:07:03.458 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1920]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:07:03.463 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1920]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:07:03.463 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1920]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:03.577 - gnmi.gNMI/Get STARTED [callId=1921]
+Metadata()
+
+*** 2023-10-16 21:07:03.577 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1921]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:07:03.581 - gnmi.gNMI/Get << INBOUND << [callId=1921]
+notification {
+  timestamp: 1697490423579314995
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:07:03.581 - gnmi.gNMI/Get CLOSED [callId=1921]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:03.610 - p4.v1.P4Runtime/Read STARTED [callId=1922]
+Metadata()
+
+*** 2023-10-16 21:07:03.610 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1922]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:03.612 - p4.v1.P4Runtime/Read << INBOUND << [callId=1922]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:03.613 - p4.v1.P4Runtime/Read CLOSED [callId=1922]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:05.235 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1923]
+Metadata()
+
+*** 2023-10-16 21:07:05.235 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1923]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:07:05.238 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1923]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:07:05.238 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1923]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:07.596 - p4.v1.P4Runtime/Read STARTED [callId=1924]
+Metadata()
+
+*** 2023-10-16 21:07:07.597 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1924]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:07.600 - p4.v1.P4Runtime/Read << INBOUND << [callId=1924]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:07.601 - p4.v1.P4Runtime/Read CLOSED [callId=1924]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:11.604 - p4.v1.P4Runtime/Read STARTED [callId=1925]
+Metadata()
+
+*** 2023-10-16 21:07:11.605 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1925]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:11.606 - p4.v1.P4Runtime/Read << INBOUND << [callId=1925]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:11.606 - p4.v1.P4Runtime/Read CLOSED [callId=1925]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:13.457 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1926]
+Metadata()
+
+*** 2023-10-16 21:07:13.457 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1926]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:07:13.460 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1926]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:07:13.460 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1926]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:13.577 - gnmi.gNMI/Get STARTED [callId=1927]
+Metadata()
+
+*** 2023-10-16 21:07:13.578 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1927]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:07:13.581 - gnmi.gNMI/Get << INBOUND << [callId=1927]
+notification {
+  timestamp: 1697490433579501244
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:07:13.581 - gnmi.gNMI/Get CLOSED [callId=1927]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:15.603 - p4.v1.P4Runtime/Read STARTED [callId=1928]
+Metadata()
+
+*** 2023-10-16 21:07:15.604 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1928]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:15.606 - p4.v1.P4Runtime/Read << INBOUND << [callId=1928]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:15.606 - p4.v1.P4Runtime/Read CLOSED [callId=1928]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:19.604 - p4.v1.P4Runtime/Read STARTED [callId=1929]
+Metadata()
+
+*** 2023-10-16 21:07:19.604 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1929]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:19.606 - p4.v1.P4Runtime/Read << INBOUND << [callId=1929]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:19.606 - p4.v1.P4Runtime/Read CLOSED [callId=1929]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:20.225 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1930]
+Metadata()
+
+*** 2023-10-16 21:07:20.225 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1930]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:07:20.227 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1930]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:07:20.227 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1930]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:23.458 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1931]
+Metadata()
+
+*** 2023-10-16 21:07:23.461 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1931]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:07:23.462 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1931]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:07:23.462 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1931]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:23.577 - gnmi.gNMI/Get STARTED [callId=1932]
+Metadata()
+
+*** 2023-10-16 21:07:23.578 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1932]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:07:23.580 - gnmi.gNMI/Get << INBOUND << [callId=1932]
+notification {
+  timestamp: 1697490443578933313
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:07:23.581 - gnmi.gNMI/Get CLOSED [callId=1932]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:23.600 - p4.v1.P4Runtime/Read STARTED [callId=1933]
+Metadata()
+
+*** 2023-10-16 21:07:23.600 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1933]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:23.601 - p4.v1.P4Runtime/Read << INBOUND << [callId=1933]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:23.602 - p4.v1.P4Runtime/Read CLOSED [callId=1933]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:27.604 - p4.v1.P4Runtime/Read STARTED [callId=1934]
+Metadata()
+
+*** 2023-10-16 21:07:27.604 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1934]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:27.606 - p4.v1.P4Runtime/Read << INBOUND << [callId=1934]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:27.606 - p4.v1.P4Runtime/Read CLOSED [callId=1934]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:31.604 - p4.v1.P4Runtime/Read STARTED [callId=1935]
+Metadata()
+
+*** 2023-10-16 21:07:31.604 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1935]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:31.606 - p4.v1.P4Runtime/Read << INBOUND << [callId=1935]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:31.607 - p4.v1.P4Runtime/Read CLOSED [callId=1935]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:33.459 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1936]
+Metadata()
+
+*** 2023-10-16 21:07:33.459 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1936]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:07:33.460 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1936]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:07:33.460 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1936]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:33.577 - gnmi.gNMI/Get STARTED [callId=1937]
+Metadata()
+
+*** 2023-10-16 21:07:33.577 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1937]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:07:33.580 - gnmi.gNMI/Get << INBOUND << [callId=1937]
+notification {
+  timestamp: 1697490453578067271
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:07:33.580 - gnmi.gNMI/Get CLOSED [callId=1937]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:35.224 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1938]
+Metadata()
+
+*** 2023-10-16 21:07:35.224 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1938]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:07:35.226 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1938]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:07:35.226 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1938]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:35.602 - p4.v1.P4Runtime/Read STARTED [callId=1939]
+Metadata()
+
+*** 2023-10-16 21:07:35.603 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1939]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:35.604 - p4.v1.P4Runtime/Read << INBOUND << [callId=1939]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:35.604 - p4.v1.P4Runtime/Read CLOSED [callId=1939]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:39.605 - p4.v1.P4Runtime/Read STARTED [callId=1940]
+Metadata()
+
+*** 2023-10-16 21:07:39.606 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1940]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:39.607 - p4.v1.P4Runtime/Read << INBOUND << [callId=1940]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:39.607 - p4.v1.P4Runtime/Read CLOSED [callId=1940]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:43.459 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1941]
+Metadata()
+
+*** 2023-10-16 21:07:43.459 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1941]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:07:43.467 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1941]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:07:43.467 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1941]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:43.577 - gnmi.gNMI/Get STARTED [callId=1942]
+Metadata()
+
+*** 2023-10-16 21:07:43.577 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1942]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:07:43.581 - gnmi.gNMI/Get << INBOUND << [callId=1942]
+notification {
+  timestamp: 1697490463578345534
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:07:43.581 - gnmi.gNMI/Get CLOSED [callId=1942]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:43.603 - p4.v1.P4Runtime/Read STARTED [callId=1943]
+Metadata()
+
+*** 2023-10-16 21:07:43.603 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1943]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:43.605 - p4.v1.P4Runtime/Read << INBOUND << [callId=1943]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:43.605 - p4.v1.P4Runtime/Read CLOSED [callId=1943]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:47.601 - p4.v1.P4Runtime/Read STARTED [callId=1944]
+Metadata()
+
+*** 2023-10-16 21:07:47.601 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1944]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:47.604 - p4.v1.P4Runtime/Read << INBOUND << [callId=1944]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:47.604 - p4.v1.P4Runtime/Read CLOSED [callId=1944]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:50.226 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1945]
+Metadata()
+
+*** 2023-10-16 21:07:50.237 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1945]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:07:50.240 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1945]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:07:50.240 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1945]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:51.601 - p4.v1.P4Runtime/Read STARTED [callId=1946]
+Metadata()
+
+*** 2023-10-16 21:07:51.601 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1946]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:51.603 - p4.v1.P4Runtime/Read << INBOUND << [callId=1946]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:51.603 - p4.v1.P4Runtime/Read CLOSED [callId=1946]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:53.458 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1947]
+Metadata()
+
+*** 2023-10-16 21:07:53.458 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1947]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:07:53.460 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1947]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:07:53.460 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1947]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:53.577 - gnmi.gNMI/Get STARTED [callId=1948]
+Metadata()
+
+*** 2023-10-16 21:07:53.577 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1948]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:07:53.580 - gnmi.gNMI/Get << INBOUND << [callId=1948]
+notification {
+  timestamp: 1697490473578272766
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:07:53.580 - gnmi.gNMI/Get CLOSED [callId=1948]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:07:55.602 - p4.v1.P4Runtime/Read STARTED [callId=1949]
+Metadata()
+
+*** 2023-10-16 21:07:55.603 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1949]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:55.605 - p4.v1.P4Runtime/Read << INBOUND << [callId=1949]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:07:55.605 - p4.v1.P4Runtime/Read CLOSED [callId=1949]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:00.119 - p4.v1.P4Runtime/Read STARTED [callId=1950]
+Metadata()
+
+*** 2023-10-16 21:08:00.119 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1950]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:00.121 - p4.v1.P4Runtime/Read << INBOUND << [callId=1950]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:00.121 - p4.v1.P4Runtime/Read CLOSED [callId=1950]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:03.457 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1951]
+Metadata()
+
+*** 2023-10-16 21:08:03.458 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1951]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:08:03.459 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1951]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:08:03.459 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1951]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:03.577 - gnmi.gNMI/Get STARTED [callId=1952]
+Metadata()
+
+*** 2023-10-16 21:08:03.577 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1952]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:08:03.581 - gnmi.gNMI/Get << INBOUND << [callId=1952]
+notification {
+  timestamp: 1697490483579525115
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:08:03.581 - gnmi.gNMI/Get CLOSED [callId=1952]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:03.602 - p4.v1.P4Runtime/Read STARTED [callId=1953]
+Metadata()
+
+*** 2023-10-16 21:08:03.603 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1953]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:03.604 - p4.v1.P4Runtime/Read << INBOUND << [callId=1953]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:03.604 - p4.v1.P4Runtime/Read CLOSED [callId=1953]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:05.221 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1954]
+Metadata()
+
+*** 2023-10-16 21:08:05.221 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1954]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:08:05.223 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1954]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:08:05.224 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1954]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:07.600 - p4.v1.P4Runtime/Read STARTED [callId=1955]
+Metadata()
+
+*** 2023-10-16 21:08:07.600 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1955]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:07.605 - p4.v1.P4Runtime/Read << INBOUND << [callId=1955]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:07.610 - p4.v1.P4Runtime/Read CLOSED [callId=1955]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:11.603 - p4.v1.P4Runtime/Read STARTED [callId=1956]
+Metadata()
+
+*** 2023-10-16 21:08:11.603 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1956]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:11.604 - p4.v1.P4Runtime/Read << INBOUND << [callId=1956]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:11.605 - p4.v1.P4Runtime/Read CLOSED [callId=1956]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:13.457 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1957]
+Metadata()
+
+*** 2023-10-16 21:08:13.457 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1957]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:08:13.460 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1957]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:08:13.460 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1957]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:13.577 - gnmi.gNMI/Get STARTED [callId=1958]
+Metadata()
+
+*** 2023-10-16 21:08:13.577 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1958]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:08:13.581 - gnmi.gNMI/Get << INBOUND << [callId=1958]
+notification {
+  timestamp: 1697490493579174826
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:08:13.581 - gnmi.gNMI/Get CLOSED [callId=1958]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:15.607 - p4.v1.P4Runtime/Read STARTED [callId=1959]
+Metadata()
+
+*** 2023-10-16 21:08:15.607 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1959]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:15.609 - p4.v1.P4Runtime/Read << INBOUND << [callId=1959]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:15.609 - p4.v1.P4Runtime/Read CLOSED [callId=1959]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:19.604 - p4.v1.P4Runtime/Read STARTED [callId=1960]
+Metadata()
+
+*** 2023-10-16 21:08:19.604 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1960]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:19.606 - p4.v1.P4Runtime/Read << INBOUND << [callId=1960]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:19.607 - p4.v1.P4Runtime/Read CLOSED [callId=1960]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:20.224 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1961]
+Metadata()
+
+*** 2023-10-16 21:08:20.224 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1961]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:08:20.225 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1961]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:08:20.226 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1961]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:23.458 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1962]
+Metadata()
+
+*** 2023-10-16 21:08:23.458 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1962]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:08:23.461 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1962]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:08:23.461 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1962]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:23.577 - gnmi.gNMI/Get STARTED [callId=1963]
+Metadata()
+
+*** 2023-10-16 21:08:23.577 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1963]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:08:23.581 - gnmi.gNMI/Get << INBOUND << [callId=1963]
+notification {
+  timestamp: 1697490503579142777
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:08:23.581 - gnmi.gNMI/Get CLOSED [callId=1963]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:23.599 - p4.v1.P4Runtime/Read STARTED [callId=1964]
+Metadata()
+
+*** 2023-10-16 21:08:23.600 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1964]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:23.601 - p4.v1.P4Runtime/Read << INBOUND << [callId=1964]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:23.601 - p4.v1.P4Runtime/Read CLOSED [callId=1964]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:27.604 - p4.v1.P4Runtime/Read STARTED [callId=1965]
+Metadata()
+
+*** 2023-10-16 21:08:27.604 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1965]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:27.605 - p4.v1.P4Runtime/Read << INBOUND << [callId=1965]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:27.606 - p4.v1.P4Runtime/Read CLOSED [callId=1965]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:31.600 - p4.v1.P4Runtime/Read STARTED [callId=1966]
+Metadata()
+
+*** 2023-10-16 21:08:31.600 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1966]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:31.602 - p4.v1.P4Runtime/Read << INBOUND << [callId=1966]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:31.602 - p4.v1.P4Runtime/Read CLOSED [callId=1966]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:33.457 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1967]
+Metadata()
+
+*** 2023-10-16 21:08:33.457 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1967]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:08:33.460 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1967]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:08:33.460 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1967]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:33.577 - gnmi.gNMI/Get STARTED [callId=1968]
+Metadata()
+
+*** 2023-10-16 21:08:33.577 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1968]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:08:33.580 - gnmi.gNMI/Get << INBOUND << [callId=1968]
+notification {
+  timestamp: 1697490513578110777
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:08:33.580 - gnmi.gNMI/Get CLOSED [callId=1968]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:35.222 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1969]
+Metadata()
+
+*** 2023-10-16 21:08:35.223 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1969]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:08:35.224 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1969]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:08:35.225 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1969]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:35.605 - p4.v1.P4Runtime/Read STARTED [callId=1970]
+Metadata()
+
+*** 2023-10-16 21:08:35.605 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1970]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:35.607 - p4.v1.P4Runtime/Read << INBOUND << [callId=1970]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:35.607 - p4.v1.P4Runtime/Read CLOSED [callId=1970]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:39.602 - p4.v1.P4Runtime/Read STARTED [callId=1971]
+Metadata()
+
+*** 2023-10-16 21:08:39.602 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1971]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:39.604 - p4.v1.P4Runtime/Read << INBOUND << [callId=1971]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:39.604 - p4.v1.P4Runtime/Read CLOSED [callId=1971]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:43.457 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1972]
+Metadata()
+
+*** 2023-10-16 21:08:43.457 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1972]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:08:43.460 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1972]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:08:43.461 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1972]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:43.577 - gnmi.gNMI/Get STARTED [callId=1973]
+Metadata()
+
+*** 2023-10-16 21:08:43.577 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1973]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:08:43.580 - gnmi.gNMI/Get << INBOUND << [callId=1973]
+notification {
+  timestamp: 1697490523578933285
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:08:43.581 - gnmi.gNMI/Get CLOSED [callId=1973]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:43.604 - p4.v1.P4Runtime/Read STARTED [callId=1974]
+Metadata()
+
+*** 2023-10-16 21:08:43.604 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1974]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:43.605 - p4.v1.P4Runtime/Read << INBOUND << [callId=1974]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:43.605 - p4.v1.P4Runtime/Read CLOSED [callId=1974]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:47.599 - p4.v1.P4Runtime/Read STARTED [callId=1975]
+Metadata()
+
+*** 2023-10-16 21:08:47.599 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1975]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:47.601 - p4.v1.P4Runtime/Read << INBOUND << [callId=1975]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:47.601 - p4.v1.P4Runtime/Read CLOSED [callId=1975]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:50.223 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1976]
+Metadata()
+
+*** 2023-10-16 21:08:50.223 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1976]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:08:50.225 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1976]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:08:50.225 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1976]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:51.595 - p4.v1.P4Runtime/Read STARTED [callId=1977]
+Metadata()
+
+*** 2023-10-16 21:08:51.596 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1977]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:51.597 - p4.v1.P4Runtime/Read << INBOUND << [callId=1977]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:51.598 - p4.v1.P4Runtime/Read CLOSED [callId=1977]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:53.457 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1978]
+Metadata()
+
+*** 2023-10-16 21:08:53.457 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1978]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:08:53.461 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1978]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:08:53.461 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1978]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:53.577 - gnmi.gNMI/Get STARTED [callId=1979]
+Metadata()
+
+*** 2023-10-16 21:08:53.577 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1979]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:08:53.581 - gnmi.gNMI/Get << INBOUND << [callId=1979]
+notification {
+  timestamp: 1697490533579175272
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:08:53.581 - gnmi.gNMI/Get CLOSED [callId=1979]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:08:55.606 - p4.v1.P4Runtime/Read STARTED [callId=1980]
+Metadata()
+
+*** 2023-10-16 21:08:55.606 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1980]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:55.608 - p4.v1.P4Runtime/Read << INBOUND << [callId=1980]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:08:55.608 - p4.v1.P4Runtime/Read CLOSED [callId=1980]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:09:00.138 - p4.v1.P4Runtime/Read STARTED [callId=1981]
+Metadata()
+
+*** 2023-10-16 21:09:00.139 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1981]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:09:00.141 - p4.v1.P4Runtime/Read << INBOUND << [callId=1981]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:09:00.141 - p4.v1.P4Runtime/Read CLOSED [callId=1981]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:09:03.457 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1982]
+Metadata()
+
+*** 2023-10-16 21:09:03.458 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1982]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:09:03.461 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1982]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:09:03.461 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1982]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:09:03.577 - gnmi.gNMI/Get STARTED [callId=1983]
+Metadata()
+
+*** 2023-10-16 21:09:03.577 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1983]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:09:03.582 - gnmi.gNMI/Get << INBOUND << [callId=1983]
+notification {
+  timestamp: 1697490543579052728
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:09:03.582 - gnmi.gNMI/Get CLOSED [callId=1983]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:09:03.614 - p4.v1.P4Runtime/Read STARTED [callId=1984]
+Metadata()
+
+*** 2023-10-16 21:09:03.615 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1984]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:09:03.616 - p4.v1.P4Runtime/Read << INBOUND << [callId=1984]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:09:03.617 - p4.v1.P4Runtime/Read CLOSED [callId=1984]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:09:05.227 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1985]
+Metadata()
+
+*** 2023-10-16 21:09:05.228 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1985]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:09:05.230 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1985]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:09:05.230 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1985]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:09:07.610 - p4.v1.P4Runtime/Read STARTED [callId=1986]
+Metadata()
+
+*** 2023-10-16 21:09:07.611 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1986]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:09:07.613 - p4.v1.P4Runtime/Read << INBOUND << [callId=1986]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:09:07.613 - p4.v1.P4Runtime/Read CLOSED [callId=1986]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:09:11.741 - p4.v1.P4Runtime/Read STARTED [callId=1987]
+Metadata()
+
+*** 2023-10-16 21:09:11.742 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1987]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:09:11.757 - p4.v1.P4Runtime/Read << INBOUND << [callId=1987]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\210"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    action {
+      action {
+        action_id: 16800567
+      }
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:09:11.758 - p4.v1.P4Runtime/Read CLOSED [callId=1987]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:09:13.481 - p4.v1.P4Runtime/GetForwardingPipelineConfig STARTED [callId=1988]
+Metadata()
+
+*** 2023-10-16 21:09:13.484 - p4.v1.P4Runtime/GetForwardingPipelineConfig >> OUTBOUND >> [callId=1988]
+device_id: 1
+response_type: COOKIE_ONLY
+
+*** 2023-10-16 21:09:13.490 - p4.v1.P4Runtime/GetForwardingPipelineConfig << INBOUND << [callId=1988]
+config {
+  cookie {
+    cookie: 3205344670580703529
+  }
+}
+
+*** 2023-10-16 21:09:13.491 - p4.v1.P4Runtime/GetForwardingPipelineConfig CLOSED [callId=1988]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:09:13.595 - gnmi.gNMI/Get STARTED [callId=1989]
+Metadata()
+
+*** 2023-10-16 21:09:13.605 - gnmi.gNMI/Get >> OUTBOUND >> [callId=1989]
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth1"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+path {
+  elem {
+    name: "interfaces"
+  }
+  elem {
+    name: "interface"
+    key {
+      key: "name"
+      value: "spine1-eth2"
+    }
+  }
+  elem {
+    name: "state"
+  }
+  elem {
+    name: "counters"
+  }
+}
+encoding: PROTO
+
+*** 2023-10-16 21:09:13.632 - gnmi.gNMI/Get << INBOUND << [callId=1989]
+notification {
+  timestamp: 1697490553614830646
+  update {
+    path {
+      elem {
+        name: "interfaces"
+      }
+      elem {
+        name: "interface"
+        key {
+          key: "name"
+          value: "spi... TRUNCATED!
+
+*** 2023-10-16 21:09:13.636 - gnmi.gNMI/Get CLOSED [callId=1989]
+Status{code=OK, description=null, cause=null}
+Metadata()
+
+*** 2023-10-16 21:09:15.606 - p4.v1.P4Runtime/Read STARTED [callId=1990]
+Metadata()
+
+*** 2023-10-16 21:09:15.607 - p4.v1.P4Runtime/Read >> OUTBOUND >> [callId=1990]
+device_id: 1
+entities {
+  table_entry {
+    table_id: 33605373
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33573501
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    counter_data {
+    }
+    is_default_action: true
+  }
+}
+
+*** 2023-10-16 21:09:15.611 - p4.v1.P4Runtime/Read << INBOUND << [callId=1990]
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\206\335"
+        mask: "\377\377"
+      }
+    }
+    match {
+      field_id: 5
+      ternary {
+        value: ":"
+        mask: "\377"
+      }
+    }
+    match {
+      field_id: 6
+      ternary {
+        value: "\207"
+        mask: "\377"
+      }
+    }
+    action {
+      action {
+        action_id: 16782152
+      }
+    }
+    priority: 40001
+    counter_data {
+    }
+  }
+}
+entities {
+  table_entry {
+    table_id: 33557865
+    match {
+      field_id: 4
+      ternary {
+        value: "\b\006"
+        mask: "\377\377"
+  

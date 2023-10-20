@@ -1,0 +1,99 @@
+stratum_bmv2 -device_id=1 -chassis_config_file=/tmp/leaf1/chassis-config.txt -forwarding_pipeline_configs_file=/tmp/leaf1/pipe.txt -persistent_config_dir=/tmp/leaf1 -initial_pipeline=/root/dummy.json -cpu_port=255 -external_stratum_urls=0.0.0.0:50001 -local_stratum_url=localhost:40097 -max_num_controllers_per_node=10 -write_req_log_file=/tmp/leaf1/write-reqs.txt -logtosyslog=false -logtostderr=true -bmv2_log_level=warn
+
+--------------------------------------------------------------------------------
+
+E1016 17:15:23.604854   142 main.cc:121] Starting bmv2 simple_switch and waiting for P4 pipeline
+W1016 17:15:23.637980   142 credentials_manager.cc:45] Using insecure server credentials
+I1016 17:15:23.648329   142 timer_daemon.cc:90] The timer daemon has been started.
+I1016 17:15:23.650141   142 hal.cc:128] Setting up HAL in COLDBOOT mode...
+I1016 17:15:23.650306   142 config_monitoring_service.cc:90] Pushing the saved chassis config read from /tmp/leaf1/chassis-config.txt...
+I1016 17:15:23.679152   142 bmv2_chassis_manager.cc:476] Registered port status callbacks successfully for node 1.
+I1016 17:15:23.682507   142 bmv2_chassis_manager.cc:61] Adding port 1 to node 1
+I1016 17:15:23.718307   142 bmv2_chassis_manager.cc:61] Adding port 2 to node 1
+I1016 17:15:23.751981   142 bmv2_chassis_manager.cc:61] Adding port 3 to node 1
+I1016 17:15:23.827281   142 bmv2_chassis_manager.cc:61] Adding port 4 to node 1
+I1016 17:15:23.862236   142 bmv2_chassis_manager.cc:61] Adding port 5 to node 1
+I1016 17:15:23.920825   142 bmv2_chassis_manager.cc:61] Adding port 6 to node 1
+I1016 17:15:23.968622   212 bmv2_chassis_manager.cc:409] State of port 1 in node 1: UP.
+I1016 17:15:23.969859   212 bmv2_chassis_manager.cc:409] State of port 2 in node 1: UP.
+I1016 17:15:23.969897   212 bmv2_chassis_manager.cc:409] State of port 3 in node 1: UP.
+I1016 17:15:23.969911   212 bmv2_chassis_manager.cc:409] State of port 4 in node 1: UP.
+I1016 17:15:23.992467   142 p4_service.cc:119] Pushing the saved forwarding pipeline configs read from /tmp/leaf1/pipe.txt...
+E1016 17:15:23.992985   142 utils.cc:109] StratumErrorSpace::ERR_FILE_NOT_FOUND: /tmp/leaf1/pipe.txt not found.
+E1016 17:15:23.993436   142 utils.cc:65] Return Error: ReadFileToString(filename, &text) failed with StratumErrorSpace::ERR_FILE_NOT_FOUND: /tmp/leaf1/pipe.txt not found.
+W1016 17:15:23.993456   142 p4_service.cc:128] No saved forwarding pipeline config found at /tmp/leaf1/pipe.txt. This is normal when the switch is just installed and no master controller is connected yet.
+E1016 17:15:23.997098216     142 server_chttp2.cc:40]        {"created":"@1697476523.997044033","description":"Only 1 addresses added out of total 2 resolved","file":"external/com_github_grpc_grpc/src/core/ext/transport/chttp2/server/chttp2_server.cc","file_line":406,"referenced_errors":[{"created":"@1697476523.997039303","description":"Address family not supported by protocol","errno":97,"file":"external/com_github_grpc_grpc/src/core/lib/iomgr/socket_utils_common_posix.cc","file_line":420,"os_error":"Address family not supported by protocol","syscall":"socket","target_address":"[::1]:40097"}]}
+E1016 17:15:23.997617   142 hal.cc:223] Stratum external facing services are listening to 0.0.0.0:50001, localhost:40097...
+I1016 17:15:24.066619   212 bmv2_chassis_manager.cc:409] State of port 5 in node 1: UP.
+I1016 17:15:24.066790   212 bmv2_chassis_manager.cc:409] State of port 6 in node 1: UP.
+I1016 17:15:43.986294   230 p4_service.cc:696] Controller (connection_id: 1, election_id: 1, uri: ipv4:172.20.0.1:45462) is connected as MASTER for node (aka device) with ID 1.
+I1016 17:15:44.098582   231 bmv2_switch.cc:74] P4-based forwarding pipeline config pushed successfully to node with ID 1.
+I1016 18:53:03.658455   230 p4_service.cc:723] Controller (connection_id: 1, election_id: 1, uri: ipv4:172.20.0.1:45462) which was MASTER for node (aka device) with ID 1 is disconnected. The node is now orphan :(
+open: No such file or directory
+I1016 18:53:07.686866   212 bmv2_chassis_manager.cc:409] State of port 3 in node 1: DOWN.
+open: No such file or directory
+open: No such file or directory
+I1016 18:53:07.894899   212 bmv2_chassis_manager.cc:409] State of port 4 in node 1: DOWN.
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+I1016 18:53:08.104799   212 bmv2_chassis_manager.cc:409] State of port 5 in node 1: DOWN.
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+I1016 18:53:08.306895   212 bmv2_chassis_manager.cc:409] State of port 6 in node 1: DOWN.
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+I1016 18:53:08.949507   212 bmv2_chassis_manager.cc:409] State of port 1 in node 1: DOWN.
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+I1016 18:53:09.387428   212 bmv2_chassis_manager.cc:409] State of port 2 in node 1: DOWN.
+I1016 18:53:09.514039   142 hal.cc:244] Received signal: Terminated
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+I1016 18:53:09.558024   142 hal.cc:165] Shutting down HAL...
+I1016 18:53:09.723625   142 timer_daemon.cc:108] The timer daemon has been stopped.
+I1016 18:53:09.723897   142 main.cc:171] See you later!
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory

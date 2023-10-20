@@ -1,0 +1,45 @@
+14:17:59.092  root      : INFO    : ++++++++ Wed Oct 18 14:17:59 2023 ++++++++
+14:17:59.252  scapy.runtime: WARNING : No route found for IPv6 destination :: (no default route?)
+14:17:59.292  root      : WARNING : VXLAN support not found in Scapy
+14:17:59.292  root      : WARNING : ERSPAN support not found in Scapy
+14:17:59.292  root      : INFO    : GENEVE support found in Scapy
+14:17:59.293  root      : INFO    : MPLS support found in Scapy
+14:17:59.293  root      : WARNING : NVGRE support not found in Scapy
+14:17:59.293  root      : INFO    : IGMP support found in Scapy
+14:17:59.304  root      : DEBUG   : Parsed test parameters:
+14:17:59.304  root      : DEBUG   : 	*p4info=/p4c-out/p4info.txt
+14:17:59.304  root      : DEBUG   : 	*cpu_port=255
+14:17:59.304  root      : DEBUG   : 	*grpcaddr=localhost:28000
+14:17:59.304  root      : DEBUG   : 	*device_id=1
+14:17:59.304  root      : DEBUG   : If something is missing, make sure you used the correct syntax: --test-params="[k=v;]*k=v"
+14:17:59.345  root      : INFO    : Importing platform: eth
+14:17:59.346  root      : DEBUG   : Configuration: {'xunit_dir': 'xunit', 'disable_ipv6': False, 'minsize': 0, 'list_test_names': False, 'test_file': None, 'test_spec': '', 'allow_user': False, 'test_order_seed': 2746, 'default_negative_timeout': 0.1, 'platform': 'eth', 'log_dir': None, 'xunit': False, 'disable_erspan': False, 'device_sockets': [], 'disable_geneve': False, 'socket_recv_size': 4096, 'profile': False, 'default_timeout': 2.0, 'platform_args': None, 'relax': False, 'random_seed': None, 'interfaces': [(0, 1, 'veth1'), (0, 2, 'veth3'), (0, 3, 'veth5'), (0, 4, 'veth7'), (0, 5, 'veth9'), (0, 6, 'veth11'), (0, 7, 'veth13'), (0, 8, 'veth15')], 'test_case_timeout': None, 'port_map': {(0, 1): 'veth1', (0, 7): 'veth13', (0, 6): 'veth11', (0, 5): 'veth9', (0, 4): 'veth7', (0, 3): 'veth5', (0, 8): 'veth15', (0, 2): 'veth3'}, 'disable_vxlan': False, 'disable_nvgre': False, 'qlen': 100, 'test_order': 'default', 'profile_file': 'profile.out', 'fail_skipped': False, 'test_params': "p4info='/p4c-out/p4info.txt';grpcaddr='localhost:28000';device_id='1';cpu_port='255'", 'test_dir': './tests', 'list': False, 'platform_dir': '/usr/local/lib/python2.7/dist-packages/ptf/platforms', 'disable_igmp': False, 'disable_mpls': False, 'debug': 'verbose', 'log_file': 'ptf.log', 'failfast': False}
+14:17:59.346  root      : INFO    : port map: {(0, 1): 'veth1', (0, 7): 'veth13', (0, 6): 'veth11', (0, 5): 'veth9', (0, 4): 'veth7', (0, 3): 'veth5', (0, 8): 'veth15', (0, 2): 'veth3'}
+14:17:59.347  root      : INFO    : Autogen random seed: 77799637
+14:17:59.350  root      : INFO    : *** TEST RUN START: Wed Oct 18 14:17:59 2023
+14:17:59.351  root      : INFO    : ** START TEST CASE routing.IPv6RoutingTest
+14:17:59.415  root      : INFO    : ** END TEST CASE routing.IPv6RoutingTest
+14:17:59.420  root      : INFO    : ** START TEST CASE routing.NdpReplyGenTest
+14:17:59.420  root      : INFO    : ** START TEST CASE routing.NdpReplyGenTest
+14:17:59.456  dataplane : DEBUG   : Sending 86 bytes to device 0, port 1
+14:17:59.456  dataplane : DEBUG   : Sending 86 bytes to device 0, port 1
+14:17:59.460  root      : DEBUG   : Checking for pkt on device 0, port 1
+14:17:59.460  root      : DEBUG   : Checking for pkt on device 0, port 1
+14:17:59.460  dataplane : DEBUG   : Grabbing packet
+14:17:59.460  dataplane : DEBUG   : Grabbing packet
+14:17:59.460  dataplane : DEBUG   : Out of packets on device 0, port 1
+14:17:59.460  dataplane : DEBUG   : Out of packets on device 0, port 1
+14:17:59.460  dataplane : DEBUG   : Did not find packet
+14:17:59.460  dataplane : DEBUG   : Did not find packet
+14:17:59.462  dataplane : DEBUG   : Pkt len 86 in on device 0, port 1
+14:17:59.462  dataplane : DEBUG   : Pkt len 86 in on device 0, port 1
+14:17:59.464  dataplane : DEBUG   : Grabbing packet
+14:17:59.464  dataplane : DEBUG   : Grabbing packet
+14:17:59.464  dataplane : DEBUG   : Checking packet from device 0, port 1
+14:17:59.464  dataplane : DEBUG   : Checking packet from device 0, port 1
+14:17:59.485  root      : INFO    : ** END TEST CASE routing.NdpReplyGenTest
+14:17:59.485  root      : INFO    : ** END TEST CASE routing.NdpReplyGenTest
+14:17:59.486  root      : INFO    : *** TEST RUN END  : Wed Oct 18 14:17:59 2023
+14:17:59.486  root      : INFO    : *** TEST RUN END  : Wed Oct 18 14:17:59 2023
+14:17:59.488  dataplane : INFO    : Thread exit
+14:17:59.488  dataplane : INFO    : Thread exit

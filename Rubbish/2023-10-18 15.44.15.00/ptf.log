@@ -1,0 +1,69 @@
+14:39:20.753  root      : INFO    : ++++++++ Wed Oct 18 14:39:20 2023 ++++++++
+14:39:21.034  scapy.runtime: WARNING : No route found for IPv6 destination :: (no default route?)
+14:39:21.075  root      : WARNING : VXLAN support not found in Scapy
+14:39:21.075  root      : WARNING : ERSPAN support not found in Scapy
+14:39:21.077  root      : INFO    : GENEVE support found in Scapy
+14:39:21.080  root      : INFO    : MPLS support found in Scapy
+14:39:21.080  root      : WARNING : NVGRE support not found in Scapy
+14:39:21.082  root      : INFO    : IGMP support found in Scapy
+14:39:21.103  root      : DEBUG   : Parsed test parameters:
+14:39:21.103  root      : DEBUG   : 	*p4info=/p4c-out/p4info.txt
+14:39:21.103  root      : DEBUG   : 	*cpu_port=255
+14:39:21.103  root      : DEBUG   : 	*grpcaddr=localhost:28000
+14:39:21.103  root      : DEBUG   : 	*device_id=1
+14:39:21.103  root      : DEBUG   : If something is missing, make sure you used the correct syntax: --test-params="[k=v;]*k=v"
+14:39:21.160  root      : INFO    : Importing platform: eth
+14:39:21.161  root      : DEBUG   : Configuration: {'xunit_dir': 'xunit', 'disable_ipv6': False, 'minsize': 0, 'list_test_names': False, 'test_file': None, 'test_spec': '', 'allow_user': False, 'test_order_seed': 2746, 'default_negative_timeout': 0.1, 'platform': 'eth', 'log_dir': None, 'xunit': False, 'disable_erspan': False, 'device_sockets': [], 'disable_geneve': False, 'socket_recv_size': 4096, 'profile': False, 'default_timeout': 2.0, 'platform_args': None, 'relax': False, 'random_seed': None, 'interfaces': [(0, 1, 'veth1'), (0, 2, 'veth3'), (0, 3, 'veth5'), (0, 4, 'veth7'), (0, 5, 'veth9'), (0, 6, 'veth11'), (0, 7, 'veth13'), (0, 8, 'veth15')], 'test_case_timeout': None, 'port_map': {(0, 1): 'veth1', (0, 7): 'veth13', (0, 6): 'veth11', (0, 5): 'veth9', (0, 4): 'veth7', (0, 3): 'veth5', (0, 8): 'veth15', (0, 2): 'veth3'}, 'disable_vxlan': False, 'disable_nvgre': False, 'qlen': 100, 'test_order': 'default', 'profile_file': 'profile.out', 'fail_skipped': False, 'test_params': "p4info='/p4c-out/p4info.txt';grpcaddr='localhost:28000';device_id='1';cpu_port='255'", 'test_dir': './tests', 'list': False, 'platform_dir': '/usr/local/lib/python2.7/dist-packages/ptf/platforms', 'disable_igmp': False, 'disable_mpls': False, 'debug': 'verbose', 'log_file': 'ptf.log', 'failfast': False}
+14:39:21.161  root      : INFO    : port map: {(0, 1): 'veth1', (0, 7): 'veth13', (0, 6): 'veth11', (0, 5): 'veth9', (0, 4): 'veth7', (0, 3): 'veth5', (0, 8): 'veth15', (0, 2): 'veth3'}
+14:39:21.162  root      : INFO    : Autogen random seed: 86947592
+14:39:21.164  root      : INFO    : *** TEST RUN START: Wed Oct 18 14:39:21 2023
+14:39:21.168  root      : INFO    : ** START TEST CASE routing.IPv6RoutingTest
+14:39:21.249  dataplane : DEBUG   : Sending 100 bytes to device 0, port 1
+14:39:21.249  root      : DEBUG   : Checking for pkt on device 0, port 2
+14:39:21.249  dataplane : DEBUG   : Grabbing packet
+14:39:21.250  dataplane : DEBUG   : Out of packets on device 0, port 2
+14:39:21.250  dataplane : DEBUG   : Did not find packet
+14:39:21.259  dataplane : DEBUG   : Pkt len 100 in on device 0, port 2
+14:39:21.267  dataplane : DEBUG   : Grabbing packet
+14:39:21.268  dataplane : DEBUG   : Checking packet from device 0, port 2
+14:39:21.291  dataplane : DEBUG   : Sending 100 bytes to device 0, port 1
+14:39:21.291  root      : DEBUG   : Checking for pkt on device 0, port 2
+14:39:21.291  dataplane : DEBUG   : Grabbing packet
+14:39:21.291  dataplane : DEBUG   : Out of packets on device 0, port 2
+14:39:21.291  dataplane : DEBUG   : Did not find packet
+14:39:21.300  dataplane : DEBUG   : Pkt len 100 in on device 0, port 2
+14:39:21.309  dataplane : DEBUG   : Grabbing packet
+14:39:21.309  dataplane : DEBUG   : Checking packet from device 0, port 2
+14:39:21.331  dataplane : DEBUG   : Sending 100 bytes to device 0, port 1
+14:39:21.332  root      : DEBUG   : Checking for pkt on device 0, port 2
+14:39:21.332  dataplane : DEBUG   : Grabbing packet
+14:39:21.332  dataplane : DEBUG   : Out of packets on device 0, port 2
+14:39:21.335  dataplane : DEBUG   : Did not find packet
+14:39:21.337  dataplane : DEBUG   : Pkt len 100 in on device 0, port 2
+14:39:21.338  dataplane : DEBUG   : Grabbing packet
+14:39:21.339  dataplane : DEBUG   : Checking packet from device 0, port 2
+14:39:21.352  root      : INFO    : ** END TEST CASE routing.IPv6RoutingTest
+14:39:21.357  root      : INFO    : ** START TEST CASE routing.NdpReplyGenTest
+14:39:21.357  root      : INFO    : ** START TEST CASE routing.NdpReplyGenTest
+14:39:21.391  dataplane : DEBUG   : Sending 86 bytes to device 0, port 1
+14:39:21.391  dataplane : DEBUG   : Sending 86 bytes to device 0, port 1
+14:39:21.392  root      : DEBUG   : Checking for pkt on device 0, port 1
+14:39:21.392  root      : DEBUG   : Checking for pkt on device 0, port 1
+14:39:21.392  dataplane : DEBUG   : Grabbing packet
+14:39:21.392  dataplane : DEBUG   : Grabbing packet
+14:39:21.392  dataplane : DEBUG   : Out of packets on device 0, port 1
+14:39:21.392  dataplane : DEBUG   : Out of packets on device 0, port 1
+14:39:21.394  dataplane : DEBUG   : Did not find packet
+14:39:21.394  dataplane : DEBUG   : Did not find packet
+14:39:21.398  dataplane : DEBUG   : Pkt len 86 in on device 0, port 1
+14:39:21.398  dataplane : DEBUG   : Pkt len 86 in on device 0, port 1
+14:39:21.408  dataplane : DEBUG   : Grabbing packet
+14:39:21.408  dataplane : DEBUG   : Grabbing packet
+14:39:21.409  dataplane : DEBUG   : Checking packet from device 0, port 1
+14:39:21.409  dataplane : DEBUG   : Checking packet from device 0, port 1
+14:39:21.425  root      : INFO    : ** END TEST CASE routing.NdpReplyGenTest
+14:39:21.425  root      : INFO    : ** END TEST CASE routing.NdpReplyGenTest
+14:39:21.428  root      : INFO    : *** TEST RUN END  : Wed Oct 18 14:39:21 2023
+14:39:21.428  root      : INFO    : *** TEST RUN END  : Wed Oct 18 14:39:21 2023
+14:39:21.429  dataplane : INFO    : Thread exit
+14:39:21.429  dataplane : INFO    : Thread exit

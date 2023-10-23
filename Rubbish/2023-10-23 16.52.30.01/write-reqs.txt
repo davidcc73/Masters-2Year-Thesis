@@ -32,7 +32,3 @@
 2023-10-23 15:52:20.452825;1;type: DELETE entity { action_profile_member { action_profile_id: 285229850 member_id: 6169 } };
 2023-10-23 15:52:20.501140;1;type: DELETE entity { action_profile_group { action_profile_id: 285229850 group_id: 171 } };
 2023-10-23 15:52:20.501140;1;type: DELETE entity { action_profile_member { action_profile_id: 285229850 member_id: 6262 } };
-2023-10-23 15:52:23.415514;1;type: INSERT entity { action_profile_member { action_profile_id: 285229850 member_id: 6169 action { action_id: 16841361 params { param_id: 1 value: "\000\252\000\000\000\002" } } } };
-2023-10-23 15:52:23.415514;1;type: INSERT entity { action_profile_group { action_profile_id: 285229850 group_id: 168 members { member_id: 6169 weight: 1 } } };
-2023-10-23 15:52:23.484261;1;type: INSERT entity { action_profile_member { action_profile_id: 285229850 member_id: 6262 action { action_id: 16841361 params { param_id: 1 value: "\000\252\000\000\000\001" } } } };
-2023-10-23 15:52:23.484261;1;type: INSERT entity { action_profile_group { action_profile_id: 285229850 group_id: 171 members { member_id: 6262 weight: 1 } } };

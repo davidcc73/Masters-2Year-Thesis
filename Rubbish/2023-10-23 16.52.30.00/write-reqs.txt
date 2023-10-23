@@ -77,5 +77,3 @@
 2023-10-23 15:52:20.386181;1;type: DELETE entity { action_profile_member { action_profile_id: 285229850 member_id: 6696 } };
 2023-10-23 15:52:20.422861;1;type: DELETE entity { action_profile_group { action_profile_id: 285229850 group_id: 27 } };
 2023-10-23 15:52:20.422861;1;type: DELETE entity { action_profile_member { action_profile_id: 285229850 member_id: 1798 } };
-2023-10-23 15:52:23.252147;1;type: INSERT entity { action_profile_member { action_profile_id: 285229850 member_id: 1953 action { action_id: 16841361 params { param_id: 1 value: "\000\000\000\000\000 " } } } };
-2023-10-23 15:52:23.252147;1;type: INSERT entity { action_profile_group { action_profile_id: 285229850 group_id: 32 members { member_id: 1953 weight: 1 } } };

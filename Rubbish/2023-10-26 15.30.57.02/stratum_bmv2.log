@@ -18,18 +18,3 @@ E1023 15:36:23.198863832     145 server_chttp2.cc:40]        {"created":"@169807
 E1023 15:36:23.199069   145 hal.cc:223] Stratum external facing services are listening to 0.0.0.0:50003, localhost:50409...
 I1023 15:36:23.240463   210 bmv2_chassis_manager.cc:409] State of port 1 in node 1: UP.
 I1023 15:36:23.240657   210 bmv2_chassis_manager.cc:409] State of port 2 in node 1: UP.
-I1023 15:37:40.157719   221 p4_service.cc:696] Controller (connection_id: 1, election_id: 20, uri: ipv4:172.27.0.3:49888) is connected as MASTER for node (aka device) with ID 1.
-I1023 15:37:40.159109   221 p4_service.cc:696] Controller (connection_id: 1, election_id: 40, uri: ipv4:172.27.0.3:49888) is connected as MASTER for node (aka device) with ID 1.
-I1023 15:37:40.721242   241 bmv2_switch.cc:74] P4-based forwarding pipeline config pushed successfully to node with ID 1.
-E1023 15:37:41.003258   242 bmv2_switch.cc:189] StratumErrorSpace::ERR_INTERNAL: Not supported yet
-E1023 15:37:41.004045   242 bmv2_switch.cc:189] StratumErrorSpace::ERR_INTERNAL: Not supported yet
-E1023 15:37:41.005918   242 bmv2_switch.cc:189] StratumErrorSpace::ERR_INTERNAL: Not supported yet
-E1023 15:37:41.007226   242 bmv2_switch.cc:189] StratumErrorSpace::ERR_INTERNAL: Not supported yet
-E1023 15:37:41.007455   242 bmv2_switch.cc:189] StratumErrorSpace::ERR_INTERNAL: Not supported yet
-E1023 15:37:41.017239   242 bmv2_switch.cc:189] StratumErrorSpace::ERR_INTERNAL: Not supported yet
-E1023 15:37:41.018303   242 bmv2_switch.cc:189] StratumErrorSpace::ERR_INTERNAL: Not supported yet
-E1023 15:37:41.019727   242 bmv2_switch.cc:189] StratumErrorSpace::ERR_INTERNAL: Not supported yet
-E1023 15:37:41.019876   242 bmv2_switch.cc:189] StratumErrorSpace::ERR_INTERNAL: Not supported yet
-E1023 15:37:41.020020   242 bmv2_switch.cc:189] StratumErrorSpace::ERR_INTERNAL: Not supported yet
-I1023 15:37:41.121773   221 p4_service.cc:696] Controller (connection_id: 1, election_id: 40, uri: ipv4:172.27.0.3:49888) is connected as MASTER for node (aka device) with ID 1.
-I1023 15:37:41.423547   241 config_monitoring_service.cc:377] Initial Subscribe request from ipv4:172.27.0.3:49894 over stream 0x7f7610dd7510.

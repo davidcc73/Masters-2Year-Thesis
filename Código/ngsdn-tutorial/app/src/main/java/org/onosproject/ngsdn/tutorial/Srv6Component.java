@@ -100,7 +100,7 @@ public class Srv6Component {
     //--------------------------------------------------------------------------
 
     @Activate
-    protected void activate() {
+    protected void activate() {             //ativado auomaticamente quando o ONOS acaba de carregar
         appId = mainComponent.getAppId();
 
         // Register listeners to be informed about device and host events.

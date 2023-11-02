@@ -1,3 +1,12 @@
+mininet
+
+h1a ip -6 neigh replace 2001:1:1::B lladdr 00:00:00:00:00:1B dev h1a-eth0
+h1b ip -6 neigh replace 2001:1:1::A lladdr 00:00:00:00:00:1A dev h1b-eth0
+
+
+
+p4runtime
+
 # Create the table entry for h1b (MAC: 00:00:00:00:00:1B) to port 4
 te_h1b = table_entry["IngressPipeImpl.l2_exact_table"](action = "IngressPipeImpl.set_egress_port")
 te_h1b.match["hdr.ethernet.dst_addr"] = "00:00:00:00:00:1B"

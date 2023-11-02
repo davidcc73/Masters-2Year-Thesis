@@ -44,14 +44,14 @@ public class Srv6InsertCommand extends AbstractShellCommand {
     @Completion(DeviceIdCompleter.class)
     String uri = null;
 
-    @Argument(index = 1, name = "segments",
+    @Argument(index = 1, name = "segments",                             /*valor vem do valor vindo da command line*/
             description = "SRv6 Segments (space separated list); last segment is target IP address",
             required = false, multiValued = true)
-    @Completion(Srv6SidCompleter.class)
-    List<String> segments = null;
+    @Completion(Srv6SidCompleter.class)                             
+    List<String> segments = null;                           
 
     @Override
-    protected void doExecute() {
+    protected void doExecute() {                                  /*executavel no Onos CLI, mas deve tar a ser cham noutro sitio */
         DeviceService deviceService = get(DeviceService.class);
         Srv6Component app = get(Srv6Component.class);
 

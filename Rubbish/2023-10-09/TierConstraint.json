@@ -1,6 +1,0 @@
-{
-  "type":"TierConstraint",
-  "inclusive": true,
-  "costType": "ORDER",
-  "tiers": [3, 2, 1]
-}

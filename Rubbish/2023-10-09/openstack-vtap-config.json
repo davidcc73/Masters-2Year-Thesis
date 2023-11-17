@@ -1,7 +1,0 @@
-{
-  "network": {
-    "mode": "VXLAN",
-    "networkId": 1,
-    "serverIp": "10.10.10.1"
-  }
-}

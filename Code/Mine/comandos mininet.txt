@@ -1,0 +1,12 @@
+h3 tc qdisc add dev h3-eth0 root netem loss 10% 			10%perda de pacotes
+h3 tc qdisc del dev h3-eth0 root							reset
+
+
+
+
+
+
+
+
+
+

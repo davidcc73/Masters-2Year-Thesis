@@ -33,7 +33,6 @@ tcpdump
 pip3 install --user -r requirements.txt
 
 ###################################################################
-
 #BMv2 https://github.com/p4lang/behavioral-model
 . /etc/os-release
 echo "deb http://download.opensuse.org/repositories/home:/p4lang/xUbuntu_${VERSION_ID}/ /" | sudo tee /etc/apt/sources.list.d/home:p4lang.list
@@ -104,22 +103,18 @@ sudo make install
 
 
 
+###################################################################
+#(only David Caetano) Sumo
+sudo add-apt-repository ppa:sumo/stable
+sudo apt-get update
+sudo apt-get install sumo sumo-tools sumo-doc
 
 
 
- 
-(only David Caetano) Mininet
+
+###################################################################
+#(only David Caetano) Mininet
 https://github.com/p4lang/behavioral-model/blob/2d726e5212e198bfab0e5dc0bda21ad5e8d1b441/README.md?plain=1#L255
 Integrating with Mininet
 We will provide more information in a separate document. However you can test the Mininet integration right away using our simple_router target.
-In a first terminal, type the following:
-- cd mininet
-- sudo python3 1sw_demo.py --behavioral-exe ../targets/simple_router/simple_router --json ../targets/simple_router/simple_router.json
-Then in a second terminal:
-- cd targets/simple_router
-- ./runtime_CLI < commands.txt
-Now the switch is running and the tables have been populated. You can run pingall in Mininet or start a TCP flow with iperf between hosts h1 and h2.
-When running a P4 program with simple_switch (instead of simple_router in the above example), just provide the appropriate simple_switch binary to 1sw_demo.py with --behavioral-exe.
 
-
-(only David Caetano) Sumo

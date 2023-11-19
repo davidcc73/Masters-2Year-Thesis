@@ -101,20 +101,44 @@ make
 make check
 sudo make install
 
+#Bazel support
+#download Bazelisk binary on https://github.com/bazelbuild/bazelisk/releases 
+#move it To /usr/local/bin/bazel
+sudo mv ~/Downloads/bazelisk-linux-amd64 /usr/local/bin/bazel
+sudo chmod +x /usr/local/bin/bazel
+nano ~/.bashrc
+#add this line to the end of the file: 
+export PATH="/usr/local/bin:$PATH"
+#reopen file to reload
+nano ~/.bashrc
+
+#to test Bazel on the PI installation, it will: build the P4Runtime PI frontend and run the tests
+cd PI
+bazel build //proto/frontend:pifeproto
+bazel test //proto/tests:pi_proto_tests
+
 
 
 ###################################################################
-#(only David Caetano) Sumo
+#(only David Caetano) Eclipse Sumo
 sudo add-apt-repository ppa:sumo/stable
 sudo apt-get update
 sudo apt-get install sumo sumo-tools sumo-doc
 
 
 
-
 ###################################################################
-#(only David Caetano) Mininet
-https://github.com/p4lang/behavioral-model/blob/2d726e5212e198bfab0e5dc0bda21ad5e8d1b441/README.md?plain=1#L255
-Integrating with Mininet
-We will provide more information in a separate document. However you can test the Mininet integration right away using our simple_router target.
+#(only David Caetano) Mininet, Native Installation from Source http://mininet.org/download/
+git clone https://github.com/mininet/mininet
+cd mininet
+git tag  # list available versions
+git checkout -b mininet-2.3.0 2.3.0  # or whatever version you wish to install
+cd ..
+#go to mininet/util/install.sh and replace all "git clone git" by "git clone htpps"
+sudo PYTHON=python3 mininet/util/install.sh -a
+#test installation
+sudo mn --switch ovsbr --test pingall
+
+
+
 

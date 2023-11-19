@@ -1,0 +1,14 @@
+
+
+Assuming you have installed the p4c compiler, you can obtain the json file for a
+P4_16 v1model program as follows:
+
+    p4c --target bmv2 --arch v1model --std p4-16 <prog>.p4
+
+This will create a `<prog>.json` output file which can now be 'fed' to the bmv2
+`simple_switch` binary:
+
+    sudo ./simple_switch -i 0@<iface0> -i 1@<iface1> <prog>.json
+
+In this example \<iface0\> and \<iface1\> are the interfaces which are bound to
+the switch (as ports 0 and 1).

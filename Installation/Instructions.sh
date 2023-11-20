@@ -5,6 +5,37 @@
 #To install docker follow the official and up to date intructions "Install using the apt repository"  
 https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 
+Client: Docker Engine - Community
+ Version:           24.0.7
+ API version:       1.43
+ Go version:        go1.20.10
+ Git commit:        afdd53b
+ Built:             Thu Oct 26 09:07:41 2023
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          24.0.7
+  API version:      1.43 (minimum version 1.12)
+  Go version:       go1.20.10
+  Git commit:       311b9ff
+  Built:            Thu Oct 26 09:07:41 2023
+  OS/Arch:          linux/amd64
+  Experimental:     false
+
+ containerd:
+  Version:          1.6.24
+  GitCommit:        61f9fd88f79f081d64d6fa3bb1a0dc71ec870523
+
+ runc:
+  Version:          1.1.9
+  GitCommit:        v1.1.9-0-gccaecfc
+
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+
 
 #(probably only David Caetano needs)
 #P4c (the official supported version is 20.04 LTS) https://github.com/p4lang/p4c 
@@ -140,5 +171,16 @@ sudo PYTHON=python3 mininet/util/install.sh -a
 sudo mn --switch ovsbr --test pingall
 
 
+###################################################################
+#Test P4 in Mininet
+clone https://github.com/p4lang/behavioral-model
 
+#1º-Terminal
+	cd behavioral-model-main
+    cd mininet
+    sudo python3 1sw_demo.py --behavioral-exe ../targets/simple_router/simple_router --json ../targets/simple_router/simple_router.json
 
+#2º-Terminal
+	cd behavioral-model-main
+    cd targets/simple_router
+    ./runtime_CLI < commands.txt

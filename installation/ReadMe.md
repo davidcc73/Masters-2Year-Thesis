@@ -1,1 +1,0 @@
-Follow the steps in instructions.txt to setup the requirements

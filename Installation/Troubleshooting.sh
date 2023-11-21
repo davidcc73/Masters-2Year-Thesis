@@ -27,6 +27,8 @@ thrift (THE DEFAULT VERSION IN THE .sh IS 0.13.0)
 #0.19.0 passes "make" and "make check" MAY STIL Cause some problem later on 
 
 
+
+
 #ONOS container
 #did not runned to create a symlink
 sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker 

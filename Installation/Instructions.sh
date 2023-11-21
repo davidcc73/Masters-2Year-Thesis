@@ -179,13 +179,15 @@ bazel test //proto/tests:pi_proto_tests
 #ONOS SDN Container https://github.com/jatj/sdn_onos/blob/master/INSTALL.md
 #latest image to the date 21/11/2023
 sudo docker pull onosproject/onos@sha256:eadc0d3c32fdd52525ae9b2dd4702f61ae02e97dcd064f637aeb7f9de479a640
-#Run a single instance of ONOS, uses the most recent image in the docker
+
+#Run container of ONOS, uses the most recent image in the docker, ports may be changed later on
 sudo docker run -t -d -p 8181:8181 -p 8101:8101 -p 5005:5005 -p 830:830 --name onos onosproject/onos
+
 http://localhost:8181/onos/ui   #test ONOS UI (username:onos password:rocks)
 #Test ONOS CLI, the IP is the only one in the topology page of the ONOS GUI
 ssh -p 8101 karaf@172.17.0.2	#password:karaf
 
-
+#if it all worked the ONOS is ready to be used
 
 
 ###################################################################

@@ -64,12 +64,32 @@ tcpdump
 pip3 install --user -r requirements.txt
 
 ###################################################################
-#BMv2 https://github.com/p4lang/behavioral-model
-. /etc/os-release
-echo "deb http://download.opensuse.org/repositories/home:/p4lang/xUbuntu_${VERSION_ID}/ /" | sudo tee /etc/apt/sources.list.d/home:p4lang.list
-curl -fsSL "https://download.opensuse.org/repositories/home:p4lang/xUbuntu_${VERSION_ID}/Release.key" | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_p4lang.gpg > /dev/null
-sudo apt update
-sudo apt install p4lang-bmv2
+#BMv2
+git clone https://github.com/p4lang/behavioral-model
+cd behavioral-model
+cd ci 
+chmod +x install-nnpy.sh
+sudo ./install-nnpy.sh						
+
+chmod +x install-nanomsg.sh
+sudo ./install-nanomsg.sh
+
+chmod +x install-thrift.sh						#needs to be modified the used version in the script from 0.13.0 to 0.19.0
+sudo ./install-thrift.sh
+cd ..
+
+sudo apt-get install -y automake cmake libgmp-dev \
+    libpcap-dev libboost-dev libboost-test-dev libboost-program-options-dev \
+    libboost-system-dev libboost-filesystem-dev libboost-thread-dev \
+    libevent-dev libtool flex bison pkg-config g++ libssl-dev
+./autogen.sh
+./configure
+
+sudo make
+sudo make install 
+sudo ldconfig
+#test installation and make sure it passes them all, retries may fix some problems
+sudo make check
 
 
 ###################################################################
@@ -78,7 +98,7 @@ sudo apt install p4lang-bmv2
 git submodule update --init --recursive
 
 #Dependencies: 
-#Already installed: readline; nanomsg; libboost-thread-dev; Protobuf; gRPC
+#Already installed: readline; libboost-thread-dev; Protobuf; gRPC
 sudo apt-get -y install valgrind
 sudo apt-get -y install libtool-bin
 sudo apt-get -y install libboost-dev libboost-system-dev libboost-thread-dev
@@ -111,8 +131,13 @@ sudo make install
 
 
 #sysrepo  
+nano ~/.bashrc    
+#add this 2 lines to the end of the file: 
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 export CMAKE_PREFIX_PATH=/usr/local:$CMAKE_PREFIX_PATH
+#refresh console
+source ~/.bashrc 
+
 sudo ln -s /usr/local/lib/libyang.so /usr/lib/x86_64-linux-gnu/libyang.so
 sudo ln -s /usr/local/lib/libyang.so.2 /usr/lib/x86_64-linux-gnu/libyang.so.2
 #after this clone, go to /sysrepo-master/tests/test_rpc_action.c and add (include <stdint.h>)
@@ -132,6 +157,7 @@ make
 make check
 sudo make install
 
+
 #Bazel support
 #download Bazelisk binary on https://github.com/bazelbuild/bazelisk/releases 
 #move it To /usr/local/bin/bazel
@@ -147,6 +173,12 @@ nano ~/.bashrc
 cd PI
 bazel build //proto/frontend:pifeproto
 bazel test //proto/tests:pi_proto_tests
+
+
+###################################################################
+#ONOS SDN
+
+
 
 
 
@@ -172,15 +204,18 @@ sudo mn --switch ovsbr --test pingall
 
 
 ###################################################################
-#Test P4 in Mininet
+#Test P4 in Mininet, this will test for router (we will use switchs in the work, but it's ok)
 clone https://github.com/p4lang/behavioral-model
 
 #1º-Terminal
-	cd behavioral-model-main
+	cd behavioral-model
     cd mininet
     sudo python3 1sw_demo.py --behavioral-exe ../targets/simple_router/simple_router --json ../targets/simple_router/simple_router.json
 
 #2º-Terminal
-	cd behavioral-model-main
+	cd behavioral-model
     cd targets/simple_router
     ./runtime_CLI < commands.txt
+	
+#1º-Terminal 
+	pingall			#if there is no drops them all is good

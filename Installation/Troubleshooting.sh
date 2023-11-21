@@ -12,11 +12,16 @@ sudo ldconfig
 cd ..
 
 
-
+sysrepo
 #in sysrepo installation it was added (include <stdint.h>) to the file /sysrepo-master/tests/test_rpc_action.c
 #to solve a make install error
 
 
-#Bazel support tool not installed but available at https://github.com/p4lang/PI#bazel-support 
+nnpy
+#WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
 
 
+thrift (THE DEFAULT VERSION IN THE .sh IS 0.13.0)
+#0.11.0 fails "make"
+#0.13.0 fails "make", fails "make check" simple_switch test beacause of "segmentation fault"
+#0.19.0 passes "make" and "make check" MAY STIL Cause some problem later on 

@@ -25,3 +25,24 @@ thrift (THE DEFAULT VERSION IN THE .sh IS 0.13.0)
 #0.11.0 fails "make"
 #0.13.0 fails "make", fails "make check" simple_switch test beacause of "segmentation fault"
 #0.19.0 passes "make" and "make check" MAY STIL Cause some problem later on 
+
+
+#ONOS container
+#did not runned to create a symlink
+sudo ln -sf /usr/bin/docker.io /usr/local/bin/docker 
+
+#tested with this traits:
+sudo docker run -t -d -p 8181:8181 -p 8101:8101 -p 5005:5005 -p 830:830 --name onos onosproject/onos
+
+    -t will allocate a pseudo-tty to the container
+    -d will run the container in foreground
+    -p <CONTAINER_PORT>:<HOST_PORT> Publish a CONTAINER_PORT to a HOST_PORT. Some of the ports that ONOS uses:
+        8181 for REST API and GUI
+        8101 to access the ONOS CLI
+        9876 for intra-cluster communication (communication between target machines)
+        6653 for OpenFlow
+        6640 for OVSDB
+        830 for NETCONF
+        5005 for debugging, a java debugger can be attached to this port
+		
+#So with the previous command we are publishing the ONOS CLI, GUI, NETCONF, and Debugger ports.

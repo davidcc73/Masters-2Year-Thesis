@@ -1,0 +1,134 @@
+{
+  "devices": {
+    "device:r1": {
+      "basic": {
+        "managementAddress": "grpc://127.0.0.1:50001?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.p4.srv6_usid"
+      },
+      "srv6DeviceConfig": {
+        "myStationMac": "00:aa:00:00:00:01",
+        "uN": "fcbb:bbbb:01::",
+        "isCore": false
+      }
+    },
+    "device:r2": {
+      "basic": {
+        "managementAddress": "grpc://127.0.0.1:50002?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.p4.srv6_usid"
+      },
+      "srv6DeviceConfig": {
+        "myStationMac": "00:aa:00:00:00:02",
+        "uN": "fcbb:bbbb:02::",
+        "isCore": false      
+      }
+    },
+    "device:r3": {
+      "basic": {
+        "managementAddress": "grpc://127.0.0.1:50003?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.p4.srv6_usid"
+      },
+      "srv6DeviceConfig": {
+        "myStationMac": "00:aa:00:00:00:03",
+        "uN": "fcbb:bbbb:03::",
+        "isCore": true
+      }
+    },
+    "device:r4": {
+      "basic": {
+        "managementAddress": "grpc://127.0.0.1:50004?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.p4.srv6_usid"
+      },
+      "srv6DeviceConfig": {
+        "myStationMac": "00:aa:00:00:00:04",
+        "uN": "fcbb:bbbb:04::",
+        "isCore": true
+      }
+    },
+    "device:r5": {
+      "basic": {
+        "managementAddress": "grpc://127.0.0.1:50005?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.p4.srv6_usid"
+      },
+      "srv6DeviceConfig": {
+        "myStationMac": "00:aa:00:00:00:05",
+        "uN": "fcbb:bbbb:05::",
+        "isCore": true
+      }
+    },
+    "device:r6": {
+      "basic": {
+        "managementAddress": "grpc://127.0.0.1:50006?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.p4.srv6_usid"
+      },
+      "srv6DeviceConfig": {
+        "myStationMac": "00:aa:00:00:00:06",
+        "uN": "fcbb:bbbb:06::",
+        "isCore": true
+      }
+    },
+    "device:r7": {
+      "basic": {
+        "managementAddress": "grpc://127.0.0.1:50007?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.p4.srv6_usid"
+      },
+      "srv6DeviceConfig": {
+        "myStationMac": "00:aa:00:00:00:07",
+        "uN": "fcbb:bbbb:07::",
+        "isCore": true
+      }
+    },
+    "device:r8": {
+      "basic": {
+        "managementAddress": "grpc://127.0.0.1:50008?device_id=1",
+        "driver": "stratum-bmv2",
+        "pipeconf": "org.p4.srv6_usid"
+      },
+      "srv6DeviceConfig": {
+        "myStationMac": "00:aa:00:00:00:08",
+        "uN": "fcbb:bbbb:08::",
+        "isCore": true
+      }
+    }
+  },
+  "ports": {
+    "device:r1/3": {
+      "interfaces": [
+        {
+          "name": "r1/3",
+          "ips": [
+            "2001:1:1::ff/64"
+          ]
+        }
+      ]
+    },
+    "device:r2/3": {
+      "interfaces": [
+        {
+          "name": "r2-3",
+          "ips": [
+            "2001:1:2::ff/64"
+          ]
+        }
+      ]
+    }
+  },
+  "hosts": {
+    "00:00:00:00:00:10/None": {
+      "basic": {
+        "name": "h1"
+      }
+    },
+    "00:00:00:00:00:20/None": {
+      "basic": {
+        "name": "h2"
+      }
+    }
+  }
+}

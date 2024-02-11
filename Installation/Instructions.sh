@@ -177,8 +177,8 @@ bazel test //proto/tests:pi_proto_tests
 
 ###################################################################
 #ONOS SDN Container https://github.com/jatj/sdn_onos/blob/master/INSTALL.md
-#latest image to the date 21/11/2023
-sudo docker pull onosproject/onos@sha256:eadc0d3c32fdd52525ae9b2dd4702f61ae02e97dcd064f637aeb7f9de479a640
+#latest image to the date 21/11/2023 (2.5.2)
+sudo docker pull onosproject/onos:2.5.2
 
 #Create and Run a container of ONOS, uses the most recent image in the docker, ports may be changed later on
 sudo docker run -t -d -p 8181:8181 -p 8101:8101 -p 5005:5005 -p 830:830 --name onos onosproject/onos

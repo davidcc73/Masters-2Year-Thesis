@@ -1,0 +1,1 @@
+whemn running onos-run, the following error is thrown: missing start_onos.sh

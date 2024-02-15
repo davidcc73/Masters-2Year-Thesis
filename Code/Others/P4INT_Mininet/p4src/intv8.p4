@@ -35,11 +35,11 @@ control MyIngress(inout headers hdr,
                 process_int_source_sink.apply(hdr, local_metadata, standard_metadata);
             }
             
-            if (local_metadata.int_meta.source == true) {
+            if (local_metadata.int_meta.source == true) {       //(source) INSERT INT INSTRUCTIONS HEADER
                 process_int_source.apply(hdr, local_metadata);
             } 
 
-            if (local_metadata.int_meta.sink == true && hdr.int_header.isValid()) {
+            if (local_metadata.int_meta.sink == true && hdr.int_header.isValid()) { //(sink) 
                 // clone packet for Telemetry Report
                 // clone3(CloneType.I2E, REPORT_MIRROR_SESSION_ID,standard_metadata);
                 // clone(CloneType.I2E, REPORT_MIRROR_SESSION_ID);
@@ -71,7 +71,7 @@ control MyEgress(inout headers hdr,
                 standard_metadata.ingress_global_timestamp = local_metadata.perserv_meta.ingress_global_timestamp;
             }
 
-            process_int_transit.apply(hdr, local_metadata, standard_metadata);
+            process_int_transit.apply(hdr, local_metadata, standard_metadata);   //(transit) DIDN'T FIND WHERE THE NEW INFO IS ADDEED TO EACH FIELD IN SEQUENCE
 
             if (standard_metadata.instance_type == PKT_INSTANCE_TYPE_INGRESS_CLONE) {
                 /* send int report */

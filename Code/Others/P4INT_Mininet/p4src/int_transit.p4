@@ -389,11 +389,11 @@ control process_int_transit (
     }
 
     apply {
-        tb_int_insert.apply();
+        tb_int_insert.apply();               //ONLY ADDS SWITCH ID AND TYPE TO LOCAL METADATA
         if (local_metadata.int_meta.transit == false) {
             return;
         }
-        tb_int_inst_0003.apply();
+        tb_int_inst_0003.apply();           //THE INT INFORMATION IS SET HERE TO THE INT HEADER AND THEIR NEW SIZES TOO (header stacking?)
         tb_int_inst_0407.apply();
 
         // Decrement remaining hop cnt

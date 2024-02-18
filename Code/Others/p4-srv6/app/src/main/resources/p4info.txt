@@ -85,7 +85,6 @@ tables {
     annotations: "@defaultonly"
     scope: DEFAULT_ONLY
   }
-  implementation_id: 285231207
   direct_resource_ids: 318793840
   size: 1024
 }
@@ -537,16 +536,6 @@ actions {
     name: "IngressPipeImpl.clone_to_cpu"
     alias: "clone_to_cpu"
   }
-}
-action_profiles {
-  preamble {
-    id: 285231207
-    name: "IngressPipeImpl.ip6_ecmp_selector"
-    alias: "ip6_ecmp_selector"
-  }
-  table_ids: 33612857
-  with_selector: true
-  size: 64
 }
 action_profiles {
   preamble {

@@ -7,24 +7,15 @@ sudo make netcfg
 
 
 #--------------------at ONOS cli (sudo make onos-cli)
-#--Statically configured the IPv6 routes of each router
-#--Also the uA Instructions are contained in the `config/ua-config.txt`      
-#WARNING FAILS TO PUSH ROUTING RULES TO DEVICES (I probably Need to modify the `routing_tables.txt` file or the .p4 file to match the table id and the match key):    
-#WARN [WriteResponseImpl] Unable to INSERT table entry on device:r1: OTHER_ERROR INVALID_ARGUMENT Cannot provide direct action for indirect table 33612857 (:3) [PiTableEntry{tableId=IngressPipeImpl.routing_v6, matchKey={hdr.ipv6.dst_addr=0x20010001000100000000000000000001/128}, tableAction=IngressPipeImpl.set_next_hop(next_hop=0x10), priority=N/A, timeout=PERMANENT}]
-#Applies the specified flow rules onto their respective devices.
- flowRuleService.applyFlowRules(Utils
-                 .buildFlowRule(routerId, appId, tableId, match, action)) is trigger and return the error above (comming from the P4Runtime at the switch)
-
-
 source /config/routing_tables.txt
 source /config/ua_config.txT
 
-#---srv6_insert.txt
+#---srv6_insert.txt (go and return from h1->h2)
 #--use case1: Insert the uSID routing directive to the the two end routers
 srv6-insert device:r1 fcbb:bb00:8:7:2:fd00:: 2001:1:2::1
 srv6-insert device:r2 fcbb:bb00:7:8:1:fd00:: 2001:1:1::1
 
-#--use case 2
+#--use case 2 (only go to h2, on the back path the packet will vary route)
 srv6-insert device:r1 fcbb:bb00:9:fa94:a:faa5:b:c fcbb:bb00:e:2:fd00:: 2001:1:2::1
 
 

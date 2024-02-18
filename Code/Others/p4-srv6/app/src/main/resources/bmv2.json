@@ -5361,8 +5361,7 @@
             }
           ],
           "match_type" : "lpm",
-          "type" : "indirect_ws",
-          "action_profile" : "IngressPipeImpl.ip6_ecmp_selector",
+          "type" : "simple",
           "max_size" : 1024,
           "with_counters" : true,
           "support_timeout" : false,
@@ -5373,6 +5372,12 @@
           "next_tables" : {
             "IngressPipeImpl.set_next_hop" : "node_23",
             "NoAction" : "node_23"
+          },
+          "default_entry" : {
+            "action_id" : 2,
+            "action_const" : false,
+            "action_data" : [],
+            "action_entry_const" : false
           }
         },
         {
@@ -5615,36 +5620,8 @@
       ],
       "action_profiles" : [
         {
-          "name" : "IngressPipeImpl.ip6_ecmp_selector",
-          "id" : 0,
-          "source_info" : {
-            "filename" : "p4src/main.p4",
-            "line" : 89,
-            "column" : 55,
-            "source_fragment" : "ip6_ecmp_selector"
-          },
-          "max_size" : 64,
-          "selector" : {
-            "algo" : "crc16",
-            "input" : [
-              {
-                "type" : "field",
-                "value" : ["ipv6", "flow_label"]
-              },
-              {
-                "type" : "field",
-                "value" : ["ipv6", "dst_addr"]
-              },
-              {
-                "type" : "field",
-                "value" : ["ipv6", "src_addr"]
-              }
-            ]
-          }
-        },
-        {
           "name" : "IngressPipeImpl.ecmp_selector",
-          "id" : 1,
+          "id" : 0,
           "source_info" : {
             "filename" : "p4src/main.p4",
             "line" : 362,
